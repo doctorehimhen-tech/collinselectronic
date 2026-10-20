@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collins Electronic LTD | Premium B2B Wholesale Electronics</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            blue: '#0F172A',
+                            accent: '#2563EB',
+                            accentHover: '#1D4ED8',
+                            lightBg: '#F8FAFC',
+                            cardBg: '#FFFFFF'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .product-card:hover { transform: translateY(-4px); }
+        .transition-all-custom { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 flex flex-col min-h-screen">
+
+    <!-- TOP ANNOUNCEMENT BAR -->
+    <div class="bg-slate-900 text-slate-300 text-xs py-2 px-4">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+            <div class="flex items-center gap-4">
+                <span><i class="fa-solid fa-location-dot text-blue-400 mr-1"></i> Via La Spezia 20, 43125 Parma, Italy</span>
+                <span class="hidden md:inline"><i class="fa-solid fa-building text-blue-400 mr-1"></i> Owner: Samuel Collins</span>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="mailto:collinssamuel1993@gmail.com" class="hover:text-white transition"><i class="fa-solid fa-envelope text-blue-400 mr-1"></i> collinssamuel1993@gmail.com</a>
+                <span class="bg-blue-600 text-white text-[10px] uppercase font-bold px-2 py-0.5 rounded">B2B Wholesale Only</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- NAVIGATION -->
+    <header class="sticky top-0 z-40 bg-white border-b border-slate-200 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex items-center gap-3">
+                    <div class="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center text-white font-black text-2xl shadow-lg shadow-blue-500/30">
+                        CE
+                    </div>
+                    <div>
+                        <span class="text-xl font-black text-slate-900 tracking-tight block leading-none">COLLINS ELECTRONIC</span>
+                        <span class="text-xs font-semibold text-blue-600 tracking-widest uppercase">LTD • Parma, Italy</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Nav -->
+                <nav class="hidden md:flex items-center gap-8 font-medium text-sm text-slate-600">
+                    <a href="#inventory" class="hover:text-blue-600 transition">Wholesale Lots</a>
+                    <a href="#about" class="hover:text-blue-600 transition">About Us</a>
+                    <a href="#why-us" class="hover:text-blue-600 transition">Why Partner</a>
+                    <a href="#contact" class="hover:text-blue-600 transition">Contact & Direct Quote</a>
+                </nav>
+
+                <!-- CTA Button -->
+                <div class="flex items-center gap-4">
+                    <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-5 py-2.5 rounded-lg text-sm shadow-md transition-all">
+                        Request Bulk Quote
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 text-white py-16 lg:py-24 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="max-w-3xl">
+                <span class="inline-block bg-blue-500/20 text-blue-300 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-4 border border-blue-400/30">
+                    Verified Wholesale Supplier
+                </span>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight mb-6">
+                    Bulk Electronic Lots & Global Distribution.
+                </h1>
+                <p class="text-lg text-slate-300 mb-8 leading-relaxed">
+                    Collins Electronic LTD provides verified electronics, mobile inventory, and bulk hardware lots directly from Parma, Italy to global retailers, distributors, and trading firms.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#inventory" class="bg-blue-600 hover:bg-blue-700 text-white font-bold px-7 py-3.5 rounded-lg shadow-lg transition">
+                        View Wholesale Inventory
+                    </a>
+                    <a href="#contact" class="bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold px-7 py-3.5 rounded-lg border border-slate-700 transition">
+                        Request Price Sheet
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- METRICS BAR -->
+    <section class="bg-white border-b border-slate-200 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div>
+                    <p class="text-3xl font-black text-slate-900">100%</p>
+                    <p class="text-xs uppercase tracking-wider font-semibold text-slate-500 mt-1">B2B Verified Lots</p>
+                </div>
+                <div>
+                    <p class="text-3xl font-black text-slate-900">EU & Global</p>
+                    <p class="text-xs uppercase tracking-wider font-semibold text-slate-500 mt-1">Logistics & Shipping</p>
+                </div>
+                <div>
+                    <p class="text-3xl font-black text-slate-900">Private</p>
+                    <p class="text-xs uppercase tracking-wider font-semibold text-slate-500 mt-1">Tiered Wholesale Quotes</p>
+                </div>
+                <div>
+                    <p class="text-3xl font-black text-slate-900">Parma, IT</p>
+                    <p class="text-xs uppercase tracking-wider font-semibold text-slate-500 mt-1">European HQ & Hub</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRODUCT INVENTORY SECTION -->
+    <section id="inventory" class="py-16 bg-slate-50 flex-grow">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+                <div>
+                    <span class="text-blue-600 font-bold uppercase tracking-wider text-xs">Direct Warehouse Stock</span>
+                    <h2 class="text-3xl font-extrabold text-slate-900 mt-1">Wholesale Electronics Lots</h2>
+                    <p class="text-slate-600 mt-2 text-sm max-w-2xl">
+                        Pricing is kept confidential for authorized trading partners. Click <strong>"Inquire Price"</strong> on any lot to load it into our direct quote system.
+                    </p>
+                </div>
+                <!-- Search Box -->
+                <div class="w-full md:w-72">
+                    <div class="relative">
+                        <input type="text" id="searchInput" onkeyup="filterProducts()" placeholder="Search lot or brand..." class="w-full pl-10 pr-4 py-2.5 bg-white border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-600">
+                        <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-3.5 text-slate-400 text-xs"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PRODUCT CARDS GRID -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="productGrid">
+
+                <!-- CARD 1 -->
+                <div class="product-card bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm transition-all-custom flex flex-col">
+                    <div class="h-56 overflow-hidden bg-slate-100 relative">
+                        <img src="https://images.unsplash.com/photo-1592750475338-74b7b21085ab?auto=format&fit=crop&w=800&q=80" alt="Smartphone Lot" class="w-full h-full object-cover">
+                        <span class="absolute top-3 left-3 bg-slate-900/90 text-white text-[10px] font-bold px-2.5 py-1 rounded">Lot #CE-MOB-101</span>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <span class="text-xs font-semibold text-blue-600 uppercase tracking-wider">Mobile Devices</span>
+                        <h3 class="text-lg font-bold text-slate-900 mt-1">Grade-A Smartphone Wholesale Lot</h3>
+                        <p class="text-slate-600 text-xs mt-2 line-clamp-2">Factory sealed and tested smartphone inventory available in bulk cartons. Full warranty and inspection certificates provided.</p>
+                        <div class="mt-4 pt-4 border-t border-slate-100 grid grid-cols-2 gap-2 text-xs text-slate-500 mb-6">
+                            <div><strong class="text-slate-800">MOQ:</strong> 50 Units</div>
+                            <div><strong class="text-slate-800">Condition:</strong> Refurbished/New</div>
+                            <div><strong class="text-slate-800">Origin:</strong> EU Stock</div>
+                            <div><strong class="text-slate-800">Packaging:</strong> Bulk Boxed</div>
+                        </div>
+                        <button onclick="requestQuote('Grade-A Smartphone Wholesale Lot (CE-MOB-101)')" class="mt-auto w-full bg-slate-900 hover:bg-blue-600 text-white font-semibold py-2.5 rounded-lg text-sm transition flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-paper-plane text-xs"></i> Inquire Price & Quote
+                        </button>
+                    </div>
+                </div>
+
+                <!-- CARD 2 -->
+                <div class="product-card bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm transition-all-custom flex flex-col">
+                    <div class="h-56 overflow-hidden bg-slate-100 relative">
+                        <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=800&q=80" alt="Laptop Lot" class="w-full h-full object-cover">
+                        <span class="absolute top-3 left-3 bg-slate-900/90 text-white text-[10px] font-bold px-2.5 py-1 rounded">Lot #CE-LAP-204</span>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <span class="text-xs font-semibold text-blue-600 uppercase tracking-wider">Computing</span>
+                        <h3 class="text-lg font-bold text-slate-900 mt-1">Enterprise Laptop & Notebook Pallet</h3>
+                        <p class="text-slate-600 text-xs mt-2 line-clamp-2">Bulk pallets of high-performance laptops designed for corporate reselling, educational systems, and regional distributors.</p>
+                        <div class="mt-4 pt-4 border-t border-slate-100 grid grid-cols-2 gap-2 text-xs text-slate-500 mb-6">
+                            <div><strong class="text-slate-800">MOQ:</strong> 25 Units</div>
+                            <div><strong class="text-slate-800">Condition:</strong> Factory Sealed</div>
+                            <div><strong class="text-slate-800">Origin:</strong> EU Warehouse</div>
+                            <div><strong class="text-slate-800">Packaging:</strong> Palletized</div>
+                        </div>
+                        <button onclick="requestQuote('Enterprise Laptop & Notebook Pallet (CE-LAP-204)')" class="mt-auto w-full bg-slate-900 hover:bg-blue-600 text-white font-semibold py-2.5 rounded-lg text-sm transition flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-paper-plane text-xs"></i> Inquire Price & Quote
+                        </button>
+                    </div>
+                </div>
+
+                <!-- CARD 3 -->
+                <div class="product-card bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm transition-all-custom flex flex-col">
+                    <div class="h-56 overflow-hidden bg-slate-100 relative">
+                        <img src="
