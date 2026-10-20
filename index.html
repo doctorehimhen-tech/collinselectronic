@@ -206,4 +206,149 @@
                 <!-- CARD 3 -->
                 <div class="product-card bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm transition-all-custom flex flex-col">
                     <div class="h-56 overflow-hidden bg-slate-100 relative">
-                        <img src="
+                        <img src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&w=800&q=80" alt="Audio Accessories" class="w-full h-full object-cover">
+                        <span class="absolute top-3 left-3 bg-slate-900/90 text-white text-[10px] font-bold px-2.5 py-1 rounded">Lot #CE-AUD-309</span>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <span class="text-xs font-semibold text-blue-600 uppercase tracking-wider">Audio & Wearables</span>
+                        <h3 class="text-lg font-bold text-slate-900 mt-1">Wireless Audio & Headphone Wholesale Lot</h3>
+                        <p class="text-slate-600 text-xs mt-2 line-clamp-2">High-demand consumer audio electronics. Sealed retail packaging ready for immediate store display and online fulfillment.</p>
+                        <div class="mt-4 pt-4 border-t border-slate-100 grid grid-cols-2 gap-2 text-xs text-slate-500 mb-6">
+                            <div><strong class="text-slate-800">MOQ:</strong> 100 Units</div>
+                            <div><strong class="text-slate-800">Condition:</strong> Brand New</div>
+                            <div><strong class="text-slate-800">Origin:</strong> Italy Hub</div>
+                            <div><strong class="text-slate-800">Packaging:</strong> Master Carton</div>
+                        </div>
+                        <button onclick="requestQuote('Wireless Audio & Headphone Wholesale Lot (CE-AUD-309)')" class="mt-auto w-full bg-slate-900 hover:bg-blue-600 text-white font-semibold py-2.5 rounded-lg text-sm transition flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-paper-plane text-xs"></i> Inquire Price & Quote
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT & QUOTE INQUIRY FORM -->
+    <section id="contact" class="py-16 bg-white border-t border-slate-200">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-10">
+                <span class="text-blue-600 font-bold uppercase tracking-wider text-xs">Direct Inquiry</span>
+                <h2 class="text-3xl font-extrabold text-slate-900 mt-1">Request Wholesale Pricing</h2>
+                <p class="text-slate-600 text-sm mt-2">Fill out the form below for tier-based bulk quotes. Our sales representative Samuel Collins will reach back out shortly.</p>
+            </div>
+
+            <form id="quoteForm" onsubmit="submitForm(event)" class="bg-slate-50 p-8 rounded-2xl border border-slate-200 shadow-sm space-y-6">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Full Name *</label>
+                        <input type="text" required placeholder="John Doe" class="w-full px-4 py-3 bg-white border border-slate-300 rounded-lg text-sm focus:ring-2 focus:ring-blue-600 focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Company / Business Name *</label>
+                        <input type="text" required placeholder="Company Ltd" class="w-full px-4 py-3 bg-white border border-slate-300 rounded-lg text-sm focus:ring-2 focus:ring-blue-600 focus:outline-none">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Business Email *</label>
+                        <input type="email" required placeholder="john@company.com" class="w-full px-4 py-3 bg-white border border-slate-300 rounded-lg text-sm focus:ring-2 focus:ring-blue-600 focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Phone / WhatsApp Number</label>
+                        <input type="tel" placeholder="+39 ..." class="w-full px-4 py-3 bg-white border border-slate-300 rounded-lg text-sm focus:ring-2 focus:ring-blue-600 focus:outline-none">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Selected Lot / Inquiry Subject</label>
+                    <input type="text" id="subjectInput" placeholder="General Wholesale Inquiry" class="w-full px-4 py-3 bg-white border border-slate-300 rounded-lg text-sm focus:ring-2 focus:ring-blue-600 focus:outline-none">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Estimated Quantity / Notes</label>
+                    <textarea rows="4" placeholder="Specify order volume, target delivery region, or specific inventory needs..." class="w-full px-4 py-3 bg-white border border-slate-300 rounded-lg text-sm focus:ring-2 focus:ring-blue-600 focus:outline-none"></textarea>
+                </div>
+
+                <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3.5 rounded-lg shadow-md transition text-sm">
+                    Submit Formal Quote Request
+                </button>
+            </form>
+            <div id="successMsg" class="hidden mt-4 p-4 bg-emerald-100 border border-emerald-300 text-emerald-800 rounded-lg text-center text-sm font-semibold">
+                Thank you! Your quote inquiry has been submitted. We will contact you at your business email address.
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800 text-xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <span class="text-lg font-bold text-white block mb-2">Collins Electronic LTD</span>
+                    <p class="leading-relaxed text-slate-400">
+                        Registered wholesale trading entity specializing in bulk electronic distribution, mobile lots, and consumer technology hardware.
+                    </p>
+                </div>
+                <div>
+                    <span class="text-xs font-bold uppercase text-slate-200 tracking-wider block mb-2">Official Address</span>
+                    <p>Via La Spezia 20</p>
+                    <p>43125 Parma, Italy</p>
+                    <p class="mt-2"><strong class="text-slate-300">Owner:</strong> Samuel Collins</p>
+                </div>
+                <div>
+                    <span class="text-xs font-bold uppercase text-slate-200 tracking-wider block mb-2">Direct Contact</span>
+                    <p>Email: <a href="mailto:collinssamuel1993@gmail.com" class="text-blue-400 hover:underline">collinssamuel1993@gmail.com</a></p>
+                    <p class="mt-2 text-slate-500">Business hours: Mon - Fri (09:00 - 18:00 CET)</p>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-slate-800 flex flex-col sm:flex-row justify-between items-center gap-4 text-slate-500">
+                <p>&copy; 2026 Collins Electronic LTD. All rights reserved.</p>
+                <p>Wholesale B2B Distribution Platform</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT FOR INTERACTIVITY -->
+    <script>
+        function requestQuote(productName) {
+            const subjectInput = document.getElementById('subjectInput');
+            subjectInput.value = 'Quote Request: ' + productName;
+            document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function filterProducts() {
+            const input = document.getElementById('searchInput').value.toLowerCase();
+            const cards = document.getElementsByClassName('product-card');
+
+            for (let i = 0; i < cards.length; i++) {
+                const title = cards[i].querySelector('h3').innerText.toLowerCase();
+                const desc = cards[i].querySelector('p').innerText.toLowerCase();
+                if (title.includes(input) || desc.includes(input)) {
+                    cards[i].style.display = "";
+                } else {
+                    cards[i].style.display = "none";
+                }
+            }
+        }
+
+        function submitForm(event) {
+            event.preventDefault();
+            document.getElementById('quoteForm').reset();
+            const msg = document.getElementById('successMsg');
+            msg.classList.remove('hidden');
+            setTimeout(() => {
+                msg.classList.add('hidden');
+            }, 5000);
+        }
+    </script>
+</body>
+</html>
+          
+
+                
+             
+                
+            
+                    
