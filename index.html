@@ -3,803 +3,352 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Collins Electronic LTD - B2B Bulk Electronics & Master Lot Distributor</title>
+    <title>Collins Electronic LTD | Premium B2B Wholesale Electronics</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- FontAwesome Icons -->
+    <!-- FontAwesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts: Plus Jakarta Sans -->
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        navy: {
-                            950: '#030712',
-                            900: '#0B132B',
-                            800: '#1C2541',
-                            700: '#2A3B5C'
-                        },
-                        accent: {
-                            DEFAULT: '#3B82F6',
-                            hover: '#2563EB',
-                            orange: '#FF5722',
-                            emerald: '#10B981'
+                        brand: {
+                            blue: '#0F172A',
+                            accent: '#2563EB',
+                            accentHover: '#1D4ED8',
+                            lightBg: '#F8FAFC',
+                            cardBg: '#FFFFFF'
                         }
                     },
                     fontFamily: {
-                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        sans: ['Inter', 'sans-serif'],
                     }
                 }
             }
         }
     </script>
     <style>
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* Tech Mesh Background pattern */
-        .tech-bg {
-            background-color: #050b14;
-            background-image: 
-                radial-gradient(at 0% 0%, rgba(29, 78, 216, 0.15) 0px, transparent 50%),
-                radial-gradient(at 100% 100%, rgba(255, 87, 34, 0.08) 0px, transparent 50%),
-                radial-gradient(at 50% 50%, rgba(15, 23, 42, 0.8) 0px, transparent 100%),
-                linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
-                linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
-            background-size: 100% 100%, 100% 100%, 100% 100%, 40px 40px, 40px 40px;
-        }
-
-        .glass-panel {
-            background: rgba(15, 23, 42, 0.75);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-        }
-
-        .glass-card {
-            background: rgba(26, 38, 66, 0.6);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.07);
-        }
-
-        .glass-card:hover {
-            border-color: rgba(59, 130, 246, 0.4);
-            box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.5), 0 0 20px 0 rgba(59, 130, 246, 0.15);
-        }
-
-        .img-zoom-container {
-            overflow: hidden;
-        }
-        .img-zoom-container img {
-            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-        .glass-card:hover .img-zoom-container img {
-            transform: scale(1.08);
-        }
-
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #030712;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #1e293b;
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #334155;
-        }
+        body { font-family: 'Inter', sans-serif; }
+        .product-card:hover { transform: translateY(-4px); }
+        .transition-all-custom { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
     </style>
 </head>
-<body class="tech-bg text-slate-100 font-sans antialiased min-h-screen flex flex-col justify-between selection:bg-accent selection:text-white">
+<body class="bg-slate-50 text-slate-800 flex flex-col min-h-screen">
 
-    <!-- Top Info Bar -->
-    <div class="bg-navy-950/90 border-b border-slate-800/80 text-xs py-2.5 px-4 backdrop-blur-md sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2">
-            <div class="flex items-center gap-5 text-slate-300">
-                <span class="flex items-center gap-1.5"><i class="fa-solid fa-location-dot text-accent-orange"></i> Via La Spezia 20, 43125 Parma, Italy</span>
-                <span class="hidden sm:flex items-center gap-1.5"><i class="fa-solid fa-envelope text-accent"></i> collinssamuel1993@gmail.com</span>
+    <!-- TOP ANNOUNCEMENT BAR -->
+    <div class="bg-slate-900 text-slate-300 text-xs py-2 px-4">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+            <div class="flex items-center gap-4">
+                <span><i class="fa-solid fa-location-dot text-blue-400 mr-1"></i> Via La Spezia 20, 43125 Parma, Italy</span>
+                <span class="hidden md:inline"><i class="fa-solid fa-building text-blue-400 mr-1"></i> Owner: Samuel Collins</span>
             </div>
-            <div class="flex items-center gap-3">
-                <span class="bg-accent/10 text-blue-400 border border-accent/20 px-2.5 py-0.5 rounded-full text-[11px] font-bold tracking-wide uppercase flex items-center gap-1">
-                    <span class="w-1.5 h-1.5 rounded-full bg-blue-400 animate-ping"></span> B2B Master Distribution
-                </span>
-                <span class="text-slate-400 font-medium">Bulk Orders & Pallet Quantities Only</span>
+            <div class="flex items-center gap-4">
+                <a href="mailto:collinssamuel1993@gmail.com" class="hover:text-white transition"><i class="fa-solid fa-envelope text-blue-400 mr-1"></i> collinssamuel1993@gmail.com</a>
+                <span class="bg-blue-600 text-white text-[10px] uppercase font-bold px-2 py-0.5 rounded">B2B Wholesale Only</span>
             </div>
         </div>
     </div>
 
-    <!-- Main Navigation Bar -->
-    <header class="glass-panel sticky top-[37px] z-40 border-b border-slate-800/80">
+    <!-- NAVIGATION -->
+    <header class="sticky top-0 z-40 bg-white border-b border-slate-200 shadow-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-20">
-                <a href="#" class="flex items-center gap-3.5 group">
-                    <div class="w-11 h-11 rounded-xl bg-gradient-to-tr from-accent via-blue-600 to-indigo-700 flex items-center justify-center text-white text-xl font-black shadow-lg shadow-blue-500/20 group-hover:scale-105 transition-all">
-                        <i class="fa-solid fa-cubes-stacked"></i>
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex items-center gap-3">
+                    <div class="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center text-white font-black text-2xl shadow-lg shadow-blue-500/30">
+                        CE
                     </div>
                     <div>
-                        <span class="text-xl font-extrabold tracking-tight text-white block leading-none">COLLINS <span class="text-accent">ELECTRONIC</span></span>
-                        <span class="text-[10px] tracking-widest text-slate-400 font-bold uppercase block mt-1">LTD â¢ Commercial Wholesale</span>
+                        <span class="text-xl font-black text-slate-900 tracking-tight block leading-none">COLLINS ELECTRONIC</span>
+                        <span class="text-xs font-semibold text-blue-600 tracking-widest uppercase">LTD • Parma, Italy</span>
                     </div>
-                </a>
-
-                <nav class="hidden md:flex items-center gap-8 font-semibold text-sm text-slate-300">
-                    <a href="#hero" class="hover:text-accent transition-colors">Home</a>
-                    <a href="#catalog" class="hover:text-accent transition-colors">Wholesale Lots</a>
-                    <a href="#about" class="hover:text-accent transition-colors">Distribution Network</a>
-                    <a href="#rfq" class="hover:text-accent transition-colors">RFQ Portal</a>
-                    <a href="#contact" class="hover:text-accent transition-colors">Contact HQ</a>
-                </nav>
-
-                <div class="hidden sm:flex items-center gap-3">
-                    <a href="#rfq" class="bg-gradient-to-r from-accent to-blue-600 hover:from-blue-600 hover:to-indigo-700 text-white px-5 py-2.5 rounded-xl text-sm font-bold shadow-lg shadow-accent/20 transition-all flex items-center gap-2">
-                        <i class="fa-solid fa-file-contract"></i> Direct RFQ
-                    </a>
                 </div>
 
-                <button id="mobileMenuBtn" class="md:hidden text-slate-300 hover:text-white text-2xl focus:outline-none p-2" aria-label="Toggle Navigation">
-                    <i class="fa-solid fa-bars"></i>
-                </button>
-            </div>
-        </div>
+                <!-- Desktop Nav -->
+                <nav class="hidden md:flex items-center gap-8 font-medium text-sm text-slate-600">
+                    <a href="#inventory" class="hover:text-blue-600 transition">Wholesale Lots</a>
+                    <a href="#about" class="hover:text-blue-600 transition">About Us</a>
+                    <a href="#why-us" class="hover:text-blue-600 transition">Why Partner</a>
+                    <a href="#contact" class="hover:text-blue-600 transition">Contact & Direct Quote</a>
+                </nav>
 
-        <div id="mobileMenu" class="hidden md:hidden border-t border-slate-800 bg-navy-950 px-4 pt-3 pb-6">
-            <div class="flex flex-col gap-3 font-semibold text-slate-300">
-                <a href="#hero" class="mobile-link py-2 border-b border-slate-800/50 hover:text-accent">Home</a>
-                <a href="#catalog" class="mobile-link py-2 border-b border-slate-800/50 hover:text-accent">Wholesale Catalog</a>
-                <a href="#about" class="mobile-link py-2 border-b border-slate-800/50 hover:text-accent">Distribution Hub</a>
-                <a href="#rfq" class="mobile-link py-2 border-b border-slate-800/50 hover:text-accent">Request Quote</a>
-                <a href="#contact" class="mobile-link py-2 hover:text-accent">Contact HQ</a>
-                <a href="#rfq" class="mobile-link bg-accent text-center text-white py-3 rounded-xl font-bold mt-2 shadow-lg">
-                    Submit RFQ Form
-                </a>
+                <!-- CTA Button -->
+                <div class="flex items-center gap-4">
+                    <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-5 py-2.5 rounded-lg text-sm shadow-md transition-all">
+                        Request Bulk Quote
+                    </a>
+                </div>
             </div>
         </div>
     </header>
 
-    <main class="flex-grow">
-        <!-- Hero Section -->
-        <section id="hero" class="relative py-16 lg:py-24 overflow-hidden">
-            <div class="absolute top-1/3 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-accent/10 blur-[140px] rounded-full pointer-events-none"></div>
-            <div class="absolute bottom-10 right-10 w-[400px] h-[400px] bg-indigo-600/10 blur-[130px] rounded-full pointer-events-none"></div>
-
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                <div class="grid lg:grid-cols-12 gap-12 items-center">
-                    <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
-                        <div class="inline-flex items-center gap-2.5 bg-slate-800/80 border border-slate-700/80 px-4 py-2 rounded-full text-xs font-semibold text-slate-300 shadow-md">
-                            <i class="fa-solid fa-truck-ramp-box text-accent-orange"></i>
-                            European Master Electronics Wholesaler
-                        </div>
-                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight">
-                            Authorized Sourcing for <br class="hidden sm:block">
-                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-accent to-indigo-300">Bulk Electronics & Pallets</span>
-                        </h1>
-                        <p class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
-                            <strong>Collins Electronic LTD</strong> provides high-volume commercial supply for retailers, secondary distributors, and enterprise buyers worldwide. All items dispatched exclusively in master cartons and palletized bundles.
-                        </p>
-
-                        <div class="pt-2 flex flex-wrap justify-center lg:justify-start gap-5 text-xs text-slate-300 font-semibold">
-                            <div class="flex items-center gap-2 bg-slate-900/60 border border-slate-800 px-3.5 py-2 rounded-lg">
-                                <i class="fa-solid fa-box-archive text-accent"></i> Master Carton Packaging
-                            </div>
-                            <div class="flex items-center gap-2 bg-slate-900/60 border border-slate-800 px-3.5 py-2 rounded-lg">
-                                <i class="fa-solid fa-truck-fast text-accent-emerald"></i> Fast EU Freight & Export
-                            </div>
-                            <div class="flex items-center gap-2 bg-slate-900/60 border border-slate-800 px-3.5 py-2 rounded-lg">
-                                <i class="fa-solid fa-clipboard-check text-accent-orange"></i> Certified Quality Checks
-                            </div>
-                        </div>
-
-                        <div class="pt-4 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                            <a href="#catalog" class="bg-gradient-to-r from-accent to-blue-600 hover:from-blue-600 hover:to-indigo-700 text-white px-8 py-4 rounded-xl font-bold shadow-xl shadow-accent/20 transition-all text-center flex items-center justify-center gap-2">
-                                <i class="fa-solid fa-layer-group"></i> Browse Bulk Catalog
-                            </a>
-                            <a href="#rfq" class="bg-slate-800/80 hover:bg-slate-700/80 text-slate-200 border border-slate-700/80 px-8 py-4 rounded-xl font-bold transition-all text-center flex items-center justify-center gap-2">
-                                <i class="fa-solid fa-calculator"></i> Custom RFQ Quotation
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="lg:col-span-5">
-                        <div class="glass-panel rounded-2xl p-6 sm:p-8 relative shadow-2xl overflow-hidden">
-                            <div class="absolute -right-8 -top-8 w-32 h-32 bg-accent/10 rounded-full blur-xl pointer-events-none"></div>
-                            
-                            <div class="flex items-center justify-between mb-6 pb-4 border-b border-slate-800">
-                                <div>
-                                    <h3 class="text-xl font-extrabold text-white">Hub Overview</h3>
-                                    <p class="text-xs text-slate-400">Direct Warehouse Dispatch</p>
-                                </div>
-                                <span class="bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1.5">
-                                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Active Warehouse
-                                </span>
-                            </div>
-
-                            <div class="space-y-4 text-xs sm:text-sm">
-                                <div class="flex justify-between items-center py-2 border-b border-slate-800/60">
-                                    <span class="text-slate-400 font-medium">Distribution Center</span>
-                                    <span class="font-bold text-white">Parma, Italy</span>
-                                </div>
-                                <div class="flex justify-between items-center py-2 border-b border-slate-800/60">
-                                    <span class="text-slate-400 font-medium">Manager & Contact</span>
-                                    <span class="font-bold text-white">Samuel Collins</span>
-                                </div>
-                                <div class="flex justify-between items-center py-2 border-b border-slate-800/60">
-                                    <span class="text-slate-400 font-medium">Supply Format</span>
-                                    <span class="font-bold text-blue-400">Pallets / Container / Master Cartons</span>
-                                </div>
-                                <div class="flex justify-between items-center py-2">
-                                    <span class="text-slate-400 font-medium">Pricing Policy</span>
-                                    <span class="font-bold text-accent-orange">Private Quotation (RFQ)</span>
-                                </div>
-                            </div>
-
-                            <div class="mt-6 bg-navy-950/80 p-4 rounded-xl border border-slate-800 text-xs text-slate-400 flex items-start gap-3">
-                                <i class="fa-solid fa-lock text-accent text-base shrink-0 mt-0.5"></i>
-                                <span><strong>B2B Notice:</strong> Wholesale rates are configured based on ordered volume, frequency, and freight destination. Public prices are withheld.</span>
-                            </div>
-                        </div>
-                    </div>
+    <!-- HERO SECTION -->
+    <section class="bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 text-white py-16 lg:py-24 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="max-w-3xl">
+                <span class="inline-block bg-blue-500/20 text-blue-300 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-4 border border-blue-400/30">
+                    Verified Wholesale Supplier
+                </span>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight mb-6">
+                    Bulk Electronic Lots & Global Distribution.
+                </h1>
+                <p class="text-lg text-slate-300 mb-8 leading-relaxed">
+                    Collins Electronic LTD provides verified electronics, mobile inventory, and bulk hardware lots directly from Parma, Italy to global retailers, distributors, and trading firms.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#inventory" class="bg-blue-600 hover:bg-blue-700 text-white font-bold px-7 py-3.5 rounded-lg shadow-lg transition">
+                        View Wholesale Inventory
+                    </a>
+                    <a href="#contact" class="bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold px-7 py-3.5 rounded-lg border border-slate-700 transition">
+                        Request Price Sheet
+                    </a>
                 </div>
-            </div>
-        </section>
-
-        <!-- Product Catalog Section -->
-        <section id="catalog" class="py-16 bg-navy-950/60 relative border-t border-slate-800/80">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="flex flex-col lg:flex-row lg:items-end justify-between mb-12 gap-6">
-                    <div>
-                        <span class="text-accent font-bold text-xs uppercase tracking-widest bg-accent/10 border border-accent/20 px-3 py-1 rounded-full">Inventory & Master Lots</span>
-                        <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-3">Bulk Electronics Lots</h2>
-                        <p class="text-slate-400 text-sm mt-1">Select any master lot below to view specifications or request tiered distributor pricing.</p>
-                    </div>
-
-                    <div class="flex flex-col sm:flex-row gap-3 w-full lg:w-auto">
-                        <div class="relative w-full sm:w-72">
-                            <input type="text" id="searchInput" placeholder="Search product, SKU, specs..." class="w-full bg-slate-900 border border-slate-700/80 text-slate-200 placeholder-slate-500 text-sm rounded-xl pl-10 pr-4 py-3 focus:outline-none focus:border-accent">
-                            <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-3.5 text-slate-500 text-sm"></i>
-                        </div>
-                        <select id="categoryFilter" class="bg-slate-900 border border-slate-700/80 text-slate-200 text-sm rounded-xl px-4 py-3 focus:outline-none focus:border-accent cursor-pointer">
-                            <option value="all">All Product Categories</option>
-                            <option value="Smartphones">Smartphones & Mobile</option>
-                            <option value="Computers">Laptops & Computers</option>
-                            <option value="Audio">Audio & Acoustics</option>
-                            <option value="Smart Home">Smart Home & IoT</option>
-                            <option value="Displays">4K TVs & Displays</option>
-                            <option value="Gaming">Gaming Consoles & Gear</option>
-                            <option value="Appliances">Home Appliances</option>
-                        </select>
-                    </div>
-                </div>
-
-                <div id="productGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                    <!-- Products dynamically rendered -->
-                </div>
-
-                <div id="noResults" class="hidden py-16 text-center text-slate-500 glass-panel rounded-2xl border border-slate-800">
-                    <i class="fa-solid fa-boxes-packing text-5xl mb-4 text-slate-600"></i>
-                    <p class="text-lg font-bold text-slate-300">No matching wholesale lots found.</p>
-                    <p class="text-xs text-slate-500 mt-1">Try adjusting your search criteria or clear filters.</p>
-                    <button onclick="resetFilters()" class="mt-4 bg-slate-800 hover:bg-slate-700 text-accent px-4 py-2 rounded-xl text-xs font-bold transition-colors">
-                        Reset Search Filters
-                    </button>
-                </div>
-            </div>
-        </section>
-
-        <!-- Why Choose Us -->
-        <section id="about" class="py-16 bg-slate-900/40 border-t border-slate-800/80">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center max-w-3xl mx-auto mb-12">
-                    <span class="text-accent-emerald text-xs font-bold uppercase tracking-widest bg-emerald-500/10 border border-emerald-500/20 px-3 py-1 rounded-full">Commercial Advantages</span>
-                    <h2 class="text-3xl font-extrabold text-white mt-3">Why Source From Collins Electronic LTD</h2>
-                    <p class="text-slate-400 text-sm mt-2">Built for high-efficiency procurement, wholesale resellers, and international importers.</p>
-                </div>
-
-                <div class="grid md:grid-cols-3 gap-8">
-                    <div class="glass-card rounded-2xl p-6 relative">
-                        <div class="w-12 h-12 bg-accent/10 border border-accent/20 text-accent rounded-xl flex items-center justify-center text-xl mb-5">
-                            <i class="fa-solid fa-boxes-stacked"></i>
-                        </div>
-                        <h3 class="text-lg font-bold text-white mb-2">Standardized Master Cartons</h3>
-                        <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">
-                            Every lot is shrink-wrapped, barcode labeled, and packaged in standardized export master boxes for seamless warehouse receiving and inventory intake.
-                        </p>
-                    </div>
-
-                    <div class="glass-card rounded-2xl p-6 relative">
-                        <div class="w-12 h-12 bg-accent-orange/10 border border-accent-orange/20 text-accent-orange rounded-xl flex items-center justify-center text-xl mb-5">
-                            <i class="fa-solid fa-tags"></i>
-                        </div>
-                        <h3 class="text-lg font-bold text-white mb-2">Tiered Volume Pricing</h3>
-                        <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">
-                            We bypass retail commissions. Submit your target quantity to receive tailored tiered volume quotes directly from Samuel Collins.
-                        </p>
-                    </div>
-
-                    <div class="glass-card rounded-2xl p-6 relative">
-                        <div class="w-12 h-12 bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 rounded-xl flex items-center justify-center text-xl mb-5">
-                            <i class="fa-solid fa-earth-europe"></i>
-                        </div>
-                        <h3 class="text-lg font-bold text-white mb-2">Parma Logistics Hub</h3>
-                        <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">
-                            Situated in Parma, Italy (Via La Spezia 20), our central European warehouse handles cross-border ground, air, and sea freight logistics efficiently.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Request Quote RFQ Form -->
-        <section id="rfq" class="py-16 bg-navy-950 relative border-t border-slate-800/80">
-            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="glass-panel rounded-2xl p-6 sm:p-10 shadow-2xl relative overflow-hidden border border-slate-700/60">
-                    <div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-accent via-indigo-500 to-accent-orange"></div>
-
-                    <div class="text-center max-w-xl mx-auto mb-8">
-                        <span class="text-accent text-xs font-bold uppercase tracking-widest bg-accent/10 border border-accent/20 px-3 py-1 rounded-full">Official Business RFQ</span>
-                        <h2 class="text-2xl sm:text-3xl font-extrabold text-white mt-3">Request Wholesale Pricing Quote</h2>
-                        <p class="text-slate-400 text-xs sm:text-sm mt-1">Submit your order requirements. Our sales management team will calculate custom tier pricing and email a formal commercial invoice.</p>
-                    </div>
-
-                    <form id="rfqForm" onsubmit="handleFormSubmit(event)" class="space-y-5">
-                        <div class="grid sm:grid-cols-2 gap-5">
-                            <div>
-                                <label for="fullName" class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">Full Name *</label>
-                                <input type="text" id="fullName" required placeholder="e.g. John Doe" class="w-full bg-slate-900 border border-slate-700/80 rounded-xl px-4 py-3 text-slate-200 text-sm focus:outline-none focus:border-accent">
-                            </div>
-                            <div>
-                                <label for="companyName" class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">Company / Business Name *</label>
-                                <input type="text" id="companyName" required placeholder="e.g. Apex Tech Resellers" class="w-full bg-slate-900 border border-slate-700/80 rounded-xl px-4 py-3 text-slate-200 text-sm focus:outline-none focus:border-accent">
-                            </div>
-                        </div>
-
-                        <div class="grid sm:grid-cols-2 gap-5">
-                            <div>
-                                <label for="email" class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">Business Email *</label>
-                                <input type="email" id="email" required placeholder="purchasing@company.com" class="w-full bg-slate-900 border border-slate-700/80 rounded-xl px-4 py-3 text-slate-200 text-sm focus:outline-none focus:border-accent">
-                            </div>
-                            <div>
-                                <label for="phone" class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">Phone / WhatsApp *</label>
-                                <input type="tel" id="phone" required placeholder="+39 000 000 0000" class="w-full bg-slate-900 border border-slate-700/80 rounded-xl px-4 py-3 text-slate-200 text-sm focus:outline-none focus:border-accent">
-                            </div>
-                        </div>
-
-                        <div class="grid sm:grid-cols-2 gap-5">
-                            <div>
-                                <label for="selectedLot" class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">Selected Electronic Lot *</label>
-                                <select id="selectedLot" required class="w-full bg-slate-900 border border-slate-700/80 rounded-xl px-4 py-3 text-slate-200 text-sm focus:outline-none focus:border-accent cursor-pointer">
-                                    <option value="" disabled selected>Select a Specific Lot</option>
-                                    <option value="General Wholesale Inquiry">General Wholesale / Mixed Container Inquiry</option>
-                                </select>
-                            </div>
-                            <div>
-                                <label for="lotQuantity" class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">Target Quantity (Number of Bundles/Pallets) *</label>
-                                <input type="number" id="lotQuantity" min="1" value="1" required class="w-full bg-slate-900 border border-slate-700/80 rounded-xl px-4 py-3 text-slate-200 text-sm focus:outline-none focus:border-accent">
-                            </div>
-                        </div>
-
-                        <div>
-                            <label for="message" class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">Delivery Address & Special Terms</label>
-                            <textarea id="message" rows="4" placeholder="Specify destination country/city, target delivery date, or freight preferences..." class="w-full bg-slate-900 border border-slate-700/80 rounded-xl px-4 py-3 text-slate-200 text-sm focus:outline-none focus:border-accent"></textarea>
-                        </div>
-
-                        <button type="submit" class="w-full bg-gradient-to-r from-accent via-blue-600 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white font-extrabold py-4 rounded-xl shadow-lg shadow-accent/25 transition-all text-sm uppercase tracking-wider flex items-center justify-center gap-2">
-                            <i class="fa-solid fa-paper-plane"></i> Submit Formal Quote Request
-                        </button>
-                    </form>
-
-                    <div id="successBox" class="hidden mt-6 bg-emerald-950/90 border border-emerald-500/50 text-emerald-200 p-8 rounded-2xl text-center space-y-3">
-                        <div class="w-14 h-14 bg-emerald-500/20 text-emerald-400 rounded-full flex items-center justify-center mx-auto text-2xl border border-emerald-500/30">
-                            <i class="fa-solid fa-circle-check"></i>
-                        </div>
-                        <h3 class="text-xl font-extrabold text-white">Quotation Request Received</h3>
-                        <p class="text-xs sm:text-sm text-emerald-300 max-w-lg mx-auto leading-relaxed">
-                            Thank you, <span id="clientNameDisplay" class="font-bold text-white"></span>. Your inquiry for <span id="requestedLotDisplay" class="font-bold text-white"></span> has been assigned to <strong>Samuel Collins</strong>. A formal response will be dispatched to <span id="clientEmailDisplay" class="font-bold text-white"></span> within 24 business hours.
-                        </p>
-                        <button onclick="resetRfqForm()" class="mt-4 text-xs bg-emerald-800 hover:bg-emerald-700 text-white font-bold px-5 py-2.5 rounded-xl transition-colors">
-                            Submit Another Inquiry
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Product Modal -->
-        <div id="productModal" class="fixed inset-0 bg-navy-950/85 backdrop-blur-md z-50 hidden flex items-center justify-center p-4">
-            <div class="bg-navy-900 border border-slate-700/80 rounded-2xl max-w-3xl w-full p-6 sm:p-8 relative max-h-[90vh] overflow-y-auto shadow-2xl">
-                <button onclick="closeModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white text-xl w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center">
-                    <i class="fa-solid fa-xmark"></i>
-                </button>
-                <div id="modalContent"></div>
             </div>
         </div>
-    </main>
+    </section>
 
-    <!-- Footer -->
-    <footer id="contact" class="bg-navy-950 border-t border-slate-800/80 text-slate-400 py-12 text-sm">
+    <!-- METRICS BAR -->
+    <section class="bg-white border-b border-slate-200 py-8">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-                <div class="space-y-4">
-                    <div class="flex items-center gap-3">
-                        <div class="w-9 h-9 rounded-xl bg-accent flex items-center justify-center text-white text-base font-bold shadow-md">
-                            <i class="fa-solid fa-cubes-stacked"></i>
-                        </div>
-                        <span class="text-lg font-bold text-white tracking-tight">Collins Electronic LTD</span>
-                    </div>
-                    <p class="text-xs text-slate-400 leading-relaxed">
-                        Registered European wholesale supplier and exporter of bulk consumer electronics, telecommunications gear, and household tech bundles.
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div>
+                    <p class="text-3xl font-black text-slate-900">100%</p>
+                    <p class="text-xs uppercase tracking-wider font-semibold text-slate-500 mt-1">B2B Verified Lots</p>
+                </div>
+                <div>
+                    <p class="text-3xl font-black text-slate-900">EU & Global</p>
+                    <p class="text-xs uppercase tracking-wider font-semibold text-slate-500 mt-1">Logistics & Shipping</p>
+                </div>
+                <div>
+                    <p class="text-3xl font-black text-slate-900">Private</p>
+                    <p class="text-xs uppercase tracking-wider font-semibold text-slate-500 mt-1">Tiered Wholesale Quotes</p>
+                </div>
+                <div>
+                    <p class="text-3xl font-black text-slate-900">Parma, IT</p>
+                    <p class="text-xs uppercase tracking-wider font-semibold text-slate-500 mt-1">European HQ & Hub</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRODUCT INVENTORY SECTION -->
+    <section id="inventory" class="py-16 bg-slate-50 flex-grow">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+                <div>
+                    <span class="text-blue-600 font-bold uppercase tracking-wider text-xs">Direct Warehouse Stock</span>
+                    <h2 class="text-3xl font-extrabold text-slate-900 mt-1">Wholesale Electronics Lots</h2>
+                    <p class="text-slate-600 mt-2 text-sm max-w-2xl">
+                        Pricing is kept confidential for authorized trading partners. Click <strong>"Inquire Price"</strong> on any lot to load it into our direct quote system.
                     </p>
-                    <div class="text-xs text-slate-300 font-semibold bg-slate-900 p-3 rounded-lg border border-slate-800">
-                        <span class="text-slate-400 block text-[10px] uppercase tracking-wider">Managing Director</span>
-                        <span class="text-white text-sm">Samuel Collins</span>
+                </div>
+                <!-- Search Box -->
+                <div class="w-full md:w-72">
+                    <div class="relative">
+                        <input type="text" id="searchInput" onkeyup="filterProducts()" placeholder="Search lot or brand..." class="w-full pl-10 pr-4 py-2.5 bg-white border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-600">
+                        <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-3.5 text-slate-400 text-xs"></i>
                     </div>
-                </div>
-
-                <div class="space-y-3">
-                    <h4 class="text-white font-bold text-xs uppercase tracking-widest">Headquarters Location</h4>
-                    <ul class="space-y-2.5 text-xs">
-                        <li class="flex items-start gap-2.5">
-                            <i class="fa-solid fa-location-dot text-accent-orange mt-0.5 text-sm"></i>
-                            <span>Via La Spezia 20<br>43125 Parma, Italy</span>
-                        </li>
-                        <li class="flex items-center gap-2.5">
-                            <i class="fa-solid fa-envelope text-accent text-sm"></i>
-                            <a href="mailto:collinssamuel1993@gmail.com" class="hover:text-white transition-colors">collinssamuel1993@gmail.com</a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="space-y-3">
-                    <h4 class="text-white font-bold text-xs uppercase tracking-widest">Warehouse Operations</h4>
-                    <ul class="space-y-2 text-xs">
-                        <li><strong class="text-slate-300">Dispatch Days:</strong> Monday â Friday</li>
-                        <li><strong class="text-slate-300">Hours:</strong> 08:30 â 18:00 CET</li>
-                        <li><strong class="text-slate-300">Freight Options:</strong> Palletized Ground, Air Cargo, Ocean Container</li>
-                    </ul>
-                </div>
-
-                <div class="space-y-3">
-                    <h4 class="text-white font-bold text-xs uppercase tracking-widest">Wholesale Directives</h4>
-                    <p class="text-xs text-slate-400 leading-relaxed">
-                        We operate on a strictly B2B model. All prices are calculated upon verification of buyer credentials and volume specifications. No retail sales.
-                    </p>
                 </div>
             </div>
 
-            <div class="pt-8 border-t border-slate-800/80 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500 gap-4">
+            <!-- PRODUCT CARDS GRID -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="productGrid">
+
+                <!-- CARD 1 -->
+                <div class="product-card bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm transition-all-custom flex flex-col">
+                    <div class="h-56 overflow-hidden bg-slate-100 relative">
+                        <img src="https://images.unsplash.com/photo-1592750475338-74b7b21085ab?auto=format&fit=crop&w=800&q=80" alt="Smartphone Lot" class="w-full h-full object-cover">
+                        <span class="absolute top-3 left-3 bg-slate-900/90 text-white text-[10px] font-bold px-2.5 py-1 rounded">Lot #CE-MOB-101</span>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <span class="text-xs font-semibold text-blue-600 uppercase tracking-wider">Mobile Devices</span>
+                        <h3 class="text-lg font-bold text-slate-900 mt-1">Grade-A Smartphone Wholesale Lot</h3>
+                        <p class="text-slate-600 text-xs mt-2 line-clamp-2">Factory sealed and tested smartphone inventory available in bulk cartons. Full warranty and inspection certificates provided.</p>
+                        <div class="mt-4 pt-4 border-t border-slate-100 grid grid-cols-2 gap-2 text-xs text-slate-500 mb-6">
+                            <div><strong class="text-slate-800">MOQ:</strong> 50 Units</div>
+                            <div><strong class="text-slate-800">Condition:</strong> Refurbished/New</div>
+                            <div><strong class="text-slate-800">Origin:</strong> EU Stock</div>
+                            <div><strong class="text-slate-800">Packaging:</strong> Bulk Boxed</div>
+                        </div>
+                        <button onclick="requestQuote('Grade-A Smartphone Wholesale Lot (CE-MOB-101)')" class="mt-auto w-full bg-slate-900 hover:bg-blue-600 text-white font-semibold py-2.5 rounded-lg text-sm transition flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-paper-plane text-xs"></i> Inquire Price & Quote
+                        </button>
+                    </div>
+                </div>
+
+                <!-- CARD 2 -->
+                <div class="product-card bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm transition-all-custom flex flex-col">
+                    <div class="h-56 overflow-hidden bg-slate-100 relative">
+                        <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=800&q=80" alt="Laptop Lot" class="w-full h-full object-cover">
+                        <span class="absolute top-3 left-3 bg-slate-900/90 text-white text-[10px] font-bold px-2.5 py-1 rounded">Lot #CE-LAP-204</span>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <span class="text-xs font-semibold text-blue-600 uppercase tracking-wider">Computing</span>
+                        <h3 class="text-lg font-bold text-slate-900 mt-1">Enterprise Laptop & Notebook Pallet</h3>
+                        <p class="text-slate-600 text-xs mt-2 line-clamp-2">Bulk pallets of high-performance laptops designed for corporate reselling, educational systems, and regional distributors.</p>
+                        <div class="mt-4 pt-4 border-t border-slate-100 grid grid-cols-2 gap-2 text-xs text-slate-500 mb-6">
+                            <div><strong class="text-slate-800">MOQ:</strong> 25 Units</div>
+                            <div><strong class="text-slate-800">Condition:</strong> Factory Sealed</div>
+                            <div><strong class="text-slate-800">Origin:</strong> EU Warehouse</div>
+                            <div><strong class="text-slate-800">Packaging:</strong> Palletized</div>
+                        </div>
+                        <button onclick="requestQuote('Enterprise Laptop & Notebook Pallet (CE-LAP-204)')" class="mt-auto w-full bg-slate-900 hover:bg-blue-600 text-white font-semibold py-2.5 rounded-lg text-sm transition flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-paper-plane text-xs"></i> Inquire Price & Quote
+                        </button>
+                    </div>
+                </div>
+
+                <!-- CARD 3 -->
+                <div class="product-card bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm transition-all-custom flex flex-col">
+                    <div class="h-56 overflow-hidden bg-slate-100 relative">
+                        <img src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&w=800&q=80" alt="Audio Accessories" class="w-full h-full object-cover">
+                        <span class="absolute top-3 left-3 bg-slate-900/90 text-white text-[10px] font-bold px-2.5 py-1 rounded">Lot #CE-AUD-309</span>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <span class="text-xs font-semibold text-blue-600 uppercase tracking-wider">Audio & Wearables</span>
+                        <h3 class="text-lg font-bold text-slate-900 mt-1">Wireless Audio & Headphone Wholesale Lot</h3>
+                        <p class="text-slate-600 text-xs mt-2 line-clamp-2">High-demand consumer audio electronics. Sealed retail packaging ready for immediate store display and online fulfillment.</p>
+                        <div class="mt-4 pt-4 border-t border-slate-100 grid grid-cols-2 gap-2 text-xs text-slate-500 mb-6">
+                            <div><strong class="text-slate-800">MOQ:</strong> 100 Units</div>
+                            <div><strong class="text-slate-800">Condition:</strong> Brand New</div>
+                            <div><strong class="text-slate-800">Origin:</strong> Italy Hub</div>
+                            <div><strong class="text-slate-800">Packaging:</strong> Master Carton</div>
+                        </div>
+                        <button onclick="requestQuote('Wireless Audio & Headphone Wholesale Lot (CE-AUD-309)')" class="mt-auto w-full bg-slate-900 hover:bg-blue-600 text-white font-semibold py-2.5 rounded-lg text-sm transition flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-paper-plane text-xs"></i> Inquire Price & Quote
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT & QUOTE INQUIRY FORM -->
+    <section id="contact" class="py-16 bg-white border-t border-slate-200">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-10">
+                <span class="text-blue-600 font-bold uppercase tracking-wider text-xs">Direct Inquiry</span>
+                <h2 class="text-3xl font-extrabold text-slate-900 mt-1">Request Wholesale Pricing</h2>
+                <p class="text-slate-600 text-sm mt-2">Fill out the form below for tier-based bulk quotes. Our sales representative Samuel Collins will reach back out shortly.</p>
+            </div>
+
+            <form id="quoteForm" onsubmit="submitForm(event)" class="bg-slate-50 p-8 rounded-2xl border border-slate-200 shadow-sm space-y-6">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Full Name *</label>
+                        <input type="text" required placeholder="John Doe" class="w-full px-4 py-3 bg-white border border-slate-300 rounded-lg text-sm focus:ring-2 focus:ring-blue-600 focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Company / Business Name *</label>
+                        <input type="text" required placeholder="Company Ltd" class="w-full px-4 py-3 bg-white border border-slate-300 rounded-lg text-sm focus:ring-2 focus:ring-blue-600 focus:outline-none">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Business Email *</label>
+                        <input type="email" required placeholder="john@company.com" class="w-full px-4 py-3 bg-white border border-slate-300 rounded-lg text-sm focus:ring-2 focus:ring-blue-600 focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Phone / WhatsApp Number</label>
+                        <input type="tel" placeholder="+39 ..." class="w-full px-4 py-3 bg-white border border-slate-300 rounded-lg text-sm focus:ring-2 focus:ring-blue-600 focus:outline-none">
+                    </div>
+                </div>
+
                 <div>
-                    &copy; 2026 Collins Electronic LTD. All rights reserved.
+                    <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Selected Lot / Inquiry Subject</label>
+                    <input type="text" id="subjectInput" placeholder="General Wholesale Inquiry" class="w-full px-4 py-3 bg-white border border-slate-300 rounded-lg text-sm focus:ring-2 focus:ring-blue-600 focus:outline-none">
                 </div>
-                <div class="flex gap-6">
-                    <a href="#rfq" class="hover:text-slate-300 transition-colors">Wholesale Policy</a>
-                    <a href="#rfq" class="hover:text-slate-300 transition-colors">Freight Terms</a>
-                    <a href="#contact" class="hover:text-slate-300 transition-colors">Parma Logistics HQ</a>
+
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Estimated Quantity / Notes</label>
+                    <textarea rows="4" placeholder="Specify order volume, target delivery region, or specific inventory needs..." class="w-full px-4 py-3 bg-white border border-slate-300 rounded-lg text-sm focus:ring-2 focus:ring-blue-600 focus:outline-none"></textarea>
                 </div>
+
+                <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3.5 rounded-lg shadow-md transition text-sm">
+                    Submit Formal Quote Request
+                </button>
+            </form>
+            <div id="successMsg" class="hidden mt-4 p-4 bg-emerald-100 border border-emerald-300 text-emerald-800 rounded-lg text-center text-sm font-semibold">
+                Thank you! Your quote inquiry has been submitted. We will contact you at your business email address.
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800 text-xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <span class="text-lg font-bold text-white block mb-2">Collins Electronic LTD</span>
+                    <p class="leading-relaxed text-slate-400">
+                        Registered wholesale trading entity specializing in bulk electronic distribution, mobile lots, and consumer technology hardware.
+                    </p>
+                </div>
+                <div>
+                    <span class="text-xs font-bold uppercase text-slate-200 tracking-wider block mb-2">Official Address</span>
+                    <p>Via La Spezia 20</p>
+                    <p>43125 Parma, Italy</p>
+                    <p class="mt-2"><strong class="text-slate-300">Owner:</strong> Samuel Collins</p>
+                </div>
+                <div>
+                    <span class="text-xs font-bold uppercase text-slate-200 tracking-wider block mb-2">Direct Contact</span>
+                    <p>Email: <a href="mailto:collinssamuel1993@gmail.com" class="text-blue-400 hover:underline">collinssamuel1993@gmail.com</a></p>
+                    <p class="mt-2 text-slate-500">Business hours: Mon - Fri (09:00 - 18:00 CET)</p>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-slate-800 flex flex-col sm:flex-row justify-between items-center gap-4 text-slate-500">
+                <p>&copy; 2026 Collins Electronic LTD. All rights reserved.</p>
+                <p>Wholesale B2B Distribution Platform</p>
             </div>
         </div>
     </footer>
 
-    <!-- App Logic -->
+    <!-- JAVASCRIPT FOR INTERACTIVITY -->
     <script>
-        const products = [
-            {
-                id: 'LOT-MOB-01',
-                title: '5G Smartphone Master Lot',
-                category: 'Smartphones',
-                bundleSize: '50 Units / Master Box',
-                badge: 'Pallet Lot',
-                image: 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=800&q=80',
-                icon: 'fa-mobile-screen-button',
-                description: 'Export master box containing 50 unlocked dual-SIM 5G smartphones (6.7" OLED, 128GB/256GB mixed, 5000mAh battery). Factory sealed inside original retail packaging.',
-                specs: ['Quantity: 50 Units', 'Box Weight: 18.5 kg', 'Condition: Brand New (Factory Sealed)', 'Warranty: 12 Months International Warranty']
-            },
-            {
-                id: 'LOT-LAP-02',
-                title: 'Slim Laptop & Ultrabook Pallet',
-                category: 'Computers',
-                bundleSize: '20 Units / Wooden Pallet',
-                badge: 'High Value',
-                image: 'https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?auto=format&fit=crop&w=800&q=80',
-                icon: 'fa-laptop',
-                description: 'Commercial pallet of 20 high-performance 14" ultra-slim laptops (Core i7 / 16GB RAM / 512GB SSD) in original factory master cartons.',
-                specs: ['Quantity: 20 Laptops', 'Packaging: Pallet Wrapped & Strapped', 'Operating System: Windows 11 Pro Multi-Lang', 'Includes: Fast Chargers & EU Power Cables']
-            },
-            {
-                id: 'LOT-AUD-03',
-                title: 'ANC Wireless Earbuds Wholesale Crate',
-                category: 'Audio',
-                bundleSize: '100 Units / Carton',
-                badge: 'Fast Moving',
-                image: 'https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&w=800&q=80',
-                icon: 'fa-headphones',
-                description: 'Bulk master crate featuring 100 pairs of active noise-cancelling Bluetooth 5.3 earbuds with Qi-wireless charging pods.',
-                specs: ['Quantity: 100 Pairs', 'Color Mix: 60% Black, 40% White', 'Carton Weight: 12.0 kg', 'Certifications: CE, RoHS, FCC']
-            },
-            {
-                id: 'LOT-DIS-04',
-                title: '55" 4K Ultra-HD Smart TV Pallet',
-                category: 'Displays',
-                bundleSize: '10 Units / Freight Pallet',
-                badge: 'Container Load',
-                image: 'https://images.unsplash.com/photo-1593784991095-a205069470b6?auto=format&fit=crop&w=800&q=80',
-                icon: 'fa-tv',
-                description: 'Heavy-duty wrapped pallet load of 10 commercial-grade 55" 4K Smart TVs with HDR10+ and built-in streaming apps.',
-                specs: ['Quantity: 10 Displays', 'Freight: Wooden Pallet / Fragile Handled', 'Display Specs: 4K UHD 120Hz', 'Includes: Remote Controls & Mounting Accessories']
-            },
-            {
-                id: 'LOT-IOT-05',
-                title: 'Smart Home Security & IP Camera Lot',
-                category: 'Smart Home',
-                bundleSize: '30 Kits / Master Box',
-                badge: 'Featured Lot',
-                image: 'https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=800&q=80',
-                icon: 'fa-house-signal',
-                description: 'Commercial bundle of 30 complete smart home security systems including 1080p pan/tilt cameras, door magnetic sensors, and central hub.',
-                specs: ['Quantity: 30 Security Kits', 'Connectivity: Wi-Fi + Zigbee', 'App Support: iOS & Android', 'Carton Weight: 22 kg']
-            },
-            {
-                id: 'LOT-GAM-06',
-                title: 'Wireless Gaming Controllers & Accessories',
-                category: 'Gaming',
-                bundleSize: '80 Units / Carton',
-                badge: 'Popular',
-                image: 'https://images.unsplash.com/photo-1600080972464-8e5f35f63d08?auto=format&fit=crop&w=800&q=80',
-                icon: 'fa-gamepad',
-                description: 'Bulk shipment of 80 multi-platform wireless controllers featuring haptic feedback and hall-effect joysticks.',
-                specs: ['Quantity: 80 Gamepads', 'Compatibility: PC, Switch, Mobile', 'Battery: 800mAh Rechargeable', 'Includes: Braided USB-C Cables']
-            },
-            {
-                id: 'LOT-DRN-07',
-                title: '4K Camera Drone & Fly-More Bundle',
-                category: 'Smart Home',
-                bundleSize: '12 Bundles / Crate',
-                badge: 'High Profit',
-                image: 'https://images.unsplash.com/photo-1527977966376-1c8408f9f108?auto=format&fit=crop&w=800&q=80',
-                icon: 'fa-drone',
-                description: 'Wholesale crate containing 12 GPS aerial drones with 3-axis stabilized 4K cameras, dual batteries, and carrying cases.',
-                specs: ['Quantity: 12 Drone Kits', 'Flight Range: Up to 5 KM', 'Flight Time: 31 mins per battery', 'Packaging: Hard Carrying Shell']
-            },
-            {
-                id: 'LOT-APP-08',
-                title: 'Smart Robotic Vacuum Cleaner Pallet',
-                category: 'Appliances',
-                bundleSize: '15 Units / Pallet',
-                badge: 'Bulk Freight',
-                image: 'https://images.unsplash.com/photo-1625948515291-69613efd103f?auto=format&fit=crop&w=800&q=80',
-                icon: 'fa-robot',
-                description: 'Export pallet of 15 LiDAR navigation robotic vacuums with auto-empty docking stations.',
-                specs: ['Quantity: 15 Units', 'Freight: Palletized & Strapped', 'Suction Power: 4000Pa', 'Voltage: Universal 110V - 240V']
-            }
-        ];
-
-        function renderProducts(items) {
-            const grid = document.getElementById('productGrid');
-            const noResults = document.getElementById('noResults');
-            grid.innerHTML = '';
-
-            if (items.length === 0) {
-                noResults.classList.remove('hidden');
-                return;
-            } else {
-                noResults.classList.add('hidden');
-            }
-
-            items.forEach(product => {
-                const card = document.createElement('div');
-                card.className = "glass-card rounded-2xl overflow-hidden flex flex-col justify-between transition-all group border border-slate-800/80";
-
-                card.innerHTML = `
-                    <div>
-                        <div class="relative h-48 w-full bg-slate-950 img-zoom-container border-b border-slate-800/80">
-                            <img src="${product.image}" alt="${product.title}" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1526738549149-8e07eca6c147?auto=format&fit=crop&w=800&q=80'">
-                            <div class="absolute inset-0 bg-gradient-to-t from-navy-950 via-transparent to-black/30"></div>
-                            
-                            <div class="absolute top-3 left-3 flex gap-2">
-                                <span class="bg-navy-950/90 backdrop-blur-md text-accent border border-accent/30 text-[10px] font-extrabold px-2.5 py-1 rounded-md uppercase tracking-wider">
-                                    ${product.badge}
-                                </span>
-                            </div>
-                            <div class="absolute top-3 right-3">
-                                <span class="bg-black/70 backdrop-blur-md text-slate-300 text-[10px] font-bold px-2 py-1 rounded-md border border-white/10">
-                                    ${product.id}
-                                </span>
-                            </div>
-                            
-                            <div class="absolute bottom-3 left-3 text-xs font-bold text-slate-200 flex items-center gap-1.5">
-                                <i class="fa-solid ${product.icon} text-accent"></i> ${product.category}
-                            </div>
-                        </div>
-
-                        <div class="p-5">
-                            <h3 class="text-base font-bold text-white group-hover:text-accent transition-colors leading-snug mb-2">
-                                ${product.title}
-                            </h3>
-
-                            <div class="inline-flex items-center gap-1.5 text-xs font-bold text-amber-400 bg-amber-500/10 border border-amber-500/20 px-2.5 py-1 rounded-lg mb-3">
-                                <i class="fa-solid fa-boxes-stacked"></i> ${product.bundleSize}
-                            </div>
-
-                            <p class="text-slate-400 text-xs line-clamp-2 leading-relaxed mb-4">
-                                ${product.description}
-                            </p>
-
-                            <div class="bg-navy-950/70 p-3 rounded-xl border border-slate-800/80 mb-2">
-                                <ul class="text-[11px] text-slate-300 space-y-1">
-                                    ${product.specs.slice(0, 2).map(spec => `<li class="flex items-center gap-1.5"><i class="fa-solid fa-check text-emerald-400 text-[9px]"></i> ${spec}</li>`).join('')}
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="p-5 pt-0 mt-auto flex gap-2">
-                        <button onclick="openProductModal('${product.id}')" class="w-1/2 bg-slate-800/90 hover:bg-slate-700 text-slate-200 text-xs font-bold py-2.5 rounded-xl border border-slate-700 transition-colors flex items-center justify-center gap-1.5">
-                            <i class="fa-solid fa-circle-info"></i> Specs
-                        </button>
-                        <button onclick="quickInquire('${product.title}')" class="w-1/2 bg-gradient-to-r from-accent to-blue-600 hover:from-blue-600 hover:to-indigo-700 text-white text-xs font-extrabold py-2.5 rounded-xl transition-all shadow-md shadow-accent/20 flex items-center justify-center gap-1.5">
-                            <i class="fa-solid fa-paper-plane"></i> RFQ
-                        </button>
-                    </div>
-                `;
-                grid.appendChild(card);
-            });
-        }
-
-        function populateLotDropdown() {
-            const select = document.getElementById('selectedLot');
-            products.forEach(p => {
-                const option = document.createElement('option');
-                option.value = `${p.title} (${p.bundleSize})`;
-                option.textContent = `${p.title} - [${p.bundleSize}]`;
-                select.appendChild(option);
-            });
+        function requestQuote(productName) {
+            const subjectInput = document.getElementById('subjectInput');
+            subjectInput.value = 'Quote Request: ' + productName;
+            document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
         }
 
         function filterProducts() {
-            const query = document.getElementById('searchInput').value.toLowerCase();
-            const category = document.getElementById('categoryFilter').value;
+            const input = document.getElementById('searchInput').value.toLowerCase();
+            const cards = document.getElementsByClassName('product-card');
 
-            const filtered = products.filter(item => {
-                const matchesSearch = item.title.toLowerCase().includes(query) || 
-                                      item.description.toLowerCase().includes(query) || 
-                                      item.id.toLowerCase().includes(query);
-                const matchesCategory = category === 'all' || item.category === category;
-
-                return matchesSearch && matchesCategory;
-            });
-
-            renderProducts(filtered);
-        }
-
-        function resetFilters() {
-            document.getElementById('searchInput').value = '';
-            document.getElementById('categoryFilter').value = 'all';
-            renderProducts(products);
-        }
-
-        function openProductModal(productId) {
-            const product = products.find(p => p.id === productId);
-            if (!product) return;
-
-            const modalContent = document.getElementById('modalContent');
-            modalContent.innerHTML = `
-                <div class="grid md:grid-cols-2 gap-6 items-start">
-                    <div class="relative h-64 md:h-full rounded-xl overflow-hidden border border-slate-800">
-                        <img src="${product.image}" alt="${product.title}" class="w-full h-full object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-navy-950 via-transparent to-black/20"></div>
-                        <span class="absolute top-3 left-3 bg-accent text-white text-xs font-bold px-3 py-1 rounded-md">
-                            ${product.badge}
-                        </span>
-                    </div>
-
-                    <div class="space-y-4">
-                        <div class="flex items-center gap-2">
-                            <span class="text-xs font-bold text-accent bg-accent/10 border border-accent/20 px-2.5 py-1 rounded-md uppercase">${product.category}</span>
-                            <span class="text-xs font-bold text-slate-400 bg-slate-800 px-2.5 py-1 rounded-md">SKU: ${product.id}</span>
-                        </div>
-
-                        <h3 class="text-2xl font-extrabold text-white leading-tight">${product.title}</h3>
-                        
-                        <div class="inline-flex items-center gap-2 text-sm font-bold text-amber-400 bg-amber-500/10 border border-amber-500/20 px-3 py-1.5 rounded-lg">
-                            <i class="fa-solid fa-boxes-stacked"></i> ${product.bundleSize}
-                        </div>
-
-                        <div class="bg-slate-950 p-4 rounded-xl border border-slate-800">
-                            <h4 class="text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">Lot Overview</h4>
-                            <p class="text-slate-300 text-xs leading-relaxed">${product.description}</p>
-                        </div>
-
-                        <div>
-                            <h4 class="text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">Master Box Specifications</h4>
-                            <ul class="space-y-2 text-xs">
-                                ${product.specs.map(s => `
-                                    <li class="bg-slate-800/60 p-2.5 rounded-lg border border-slate-700/60 flex items-center gap-2 text-slate-200">
-                                        <i class="fa-solid fa-circle-check text-emerald-400"></i> ${s}
-                                    </li>
-                                `).join('')}
-                            </ul>
-                        </div>
-
-                        <div class="bg-blue-950/40 border border-blue-500/30 p-3 rounded-xl text-xs text-blue-200 flex items-start gap-2">
-                            <i class="fa-solid fa-shield-halved text-accent text-sm shrink-0 mt-0.5"></i>
-                            <span>All shipments are dispatched from Parma HQ with complete EU customs paperwork and certificate of origin.</span>
-                        </div>
-
-                        <button onclick="closeModal(); quickInquire('${product.title}')" class="w-full bg-gradient-to-r from-accent to-blue-600 hover:from-blue-600 hover:to-indigo-700 text-white font-extrabold py-3.5 rounded-xl shadow-lg shadow-accent/20 transition-all text-sm uppercase tracking-wider">
-                            Request Commercial Quote For This Lot
-                        </button>
-                    </div>
-                </div>
-            `;
-
-            document.getElementById('productModal').classList.remove('hidden');
-        }
-
-        function closeModal() {
-            document.getElementById('productModal').classList.add('hidden');
-        }
-
-        function quickInquire(productTitle) {
-            const select = document.getElementById('selectedLot');
-            for (let i = 0; i < select.options.length; i++) {
-                if (select.options[i].value.includes(productTitle)) {
-                    select.selectedIndex = i;
-                    break;
+            for (let i = 0; i < cards.length; i++) {
+                const title = cards[i].querySelector('h3').innerText.toLowerCase();
+                const desc = cards[i].querySelector('p').innerText.toLowerCase();
+                if (title.includes(input) || desc.includes(input)) {
+                    cards[i].style.display = "";
+                } else {
+                    cards[i].style.display = "none";
                 }
             }
-            document.getElementById('rfq').scrollIntoView({ behavior: 'smooth' });
         }
 
-        function handleFormSubmit(e) {
-            e.preventDefault();
-
-            const name = document.getElementById('fullName').value;
-            const email = document.getElementById('email').value;
-            const lot = document.getElementById('selectedLot').value;
-
-            document.getElementById('rfqForm').classList.add('hidden');
-            
-            document.getElementById('clientNameDisplay').textContent = name;
-            document.getElementById('requestedLotDisplay').textContent = lot || 'General Lot Inquiry';
-            document.getElementById('clientEmailDisplay').textContent = email;
-
-            document.getElementById('successBox').classList.remove('hidden');
+        function submitForm(event) {
+            event.preventDefault();
+            document.getElementById('quoteForm').reset();
+            const msg = document.getElementById('successMsg');
+            msg.classList.remove('hidden');
+            setTimeout(() => {
+                msg.classList.add('hidden');
+            }, 5000);
         }
-
-        function resetRfqForm() {
-            document.getElementById('rfqForm').reset();
-            document.getElementById('rfqForm').classList.remove('hidden');
-            document.getElementById('successBox').classList.add('hidden');
-        }
-
-        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
-            document.getElementById('mobileMenu').classList.toggle('hidden');
-        });
-
-        document.querySelectorAll('.mobile-link').forEach(link => {
-            link.addEventListener('click', () => {
-                document.getElementById('mobileMenu').classList.add('hidden');
-            });
-        });
-
-        window.addEventListener('click', function(e) {
-            const modal = document.getElementById('productModal');
-            if (e.target === modal) {
-                closeModal();
-            }
-        });
-
-        document.getElementById('searchInput').addEventListener('input', filterProducts);
-        document.getElementById('categoryFilter').addEventListener('change', filterProducts);
-
-        window.onload = function() {
-            renderProducts(products);
-            populateLotDropdown();
-        };
     </script>
 </body>
 </html>
+          
+
+                
+             
+                
+            
+                    
