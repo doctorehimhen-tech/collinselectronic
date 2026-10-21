@@ -1,2 +1,4 @@
-# collinselectronic
-Official B2B wholesale website for Collins Electronic LTD. Direct bulk electronic inventory and quote inquiry platform.
+# COLLINS WASHINGTON (CW)
+
+Official Luxury Fashion Storefront & Atelier. Featuring luxury ready-to-wear hoodies, heavy denim, cashmere joggers, and leather accessories.
+
