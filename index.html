@@ -1,0 +1,1412 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COLLINS WASHINGTON | International Luxury Atelier</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Playfair Display & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        obsidian: '#09090b',
+                        cwCard: '#131316',
+                        cwGold: '#D4AF37',
+                        cwGoldLight: '#F3E5AB',
+                        cwBluePrice: '#38bdf8',
+                        cwGray: '#1f1f24',
+                    },
+                    fontFamily: {
+                        playfair: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #09090b;
+            color: #e4e4e7;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+        
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #FFFFFF 0%, #D4AF37 50%, #A38018 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .gold-glow {
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            box-shadow: 0 0 25px rgba(212, 175, 55, 0.08);
+        }
+
+        .gold-glow:hover {
+            border: 1px solid rgba(212, 175, 55, 0.8);
+            box-shadow: 0 0 35px rgba(212, 175, 55, 0.25);
+        }
+
+        .cw-pattern {
+            background-image: radial-gradient(rgba(212, 175, 55, 0.15) 1px, transparent 1px);
+            background-size: 28px 28px;
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #09090b;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #27272a;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #D4AF37;
+        }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col justify-between selection:bg-cwGold selection:text-black">
+
+    <!-- Top Luxury Header Banner -->
+    <div class="bg-gradient-to-r from-black via-cwCard to-black text-xs border-b border-cwGold/20 py-2.5 px-4">
+        <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2 text-neutral-400">
+            <div class="flex items-center gap-6">
+                <span class="tracking-widest uppercase font-semibold text-[10px] text-cwGold">
+                    <i class="fa-solid fa-gem mr-1.5"></i> PARMA ATELIER • HAUTE COUTURE
+                </span>
+                <span class="hidden md:inline text-[11px]"><i class="fa-solid fa-location-dot text-cwGold mr-1"></i> Via La Spezia 20, 43125 Parma, Italy</span>
+            </div>
+            <div class="flex items-center gap-6 text-[11px]">
+                <button onclick="openOrderTracker()" class="hover:text-cwGold transition-colors uppercase font-medium">
+                    <i class="fa-solid fa-truck-fast text-cwGold mr-1"></i> Track Order
+                </button>
+                <span class="text-neutral-700">|</span>
+                <button onclick="openConcierge()" class="hover:text-cwGold transition-colors uppercase font-semibold">
+                    <i class="fa-solid fa-crown text-cwGold mr-1"></i> Private Fitting
+                </button>
+                <span class="hidden sm:inline text-neutral-700">|</span>
+                <span class="font-mono text-cwBluePrice font-bold">EUR (€) OFFICIAL CATALOG</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation Bar -->
+    <header class="sticky top-0 z-40 bg-obsidian/95 backdrop-blur-xl border-b border-neutral-800/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-24 flex items-center justify-between gap-4">
+            
+            <!-- Mobile Navigation Toggle -->
+            <button onclick="toggleMobileNav()" class="lg:hidden text-2xl text-neutral-300 hover:text-cwGold">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-4 group">
+                <div class="w-12 h-12 border border-cwGold/60 flex items-center justify-center bg-cwCard group-hover:border-cwGold transition-all duration-300 shadow-[0_0_15px_rgba(212,175,55,0.15)]">
+                    <span class="font-playfair text-cwGold font-extrabold text-2xl tracking-tighter">CW</span>
+                </div>
+                <div>
+                    <h1 class="font-playfair text-2xl sm:text-3xl font-black tracking-[0.2em] text-white uppercase group-hover:text-cwGold transition-colors">
+                        COLLINS WASHINGTON
+                    </h1>
+                    <p class="text-[9px] tracking-[0.4em] text-neutral-400 uppercase font-light">PARMA • MILANO • PARIS • TOKYO</p>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation Links -->
+            <nav class="hidden lg:flex items-center space-x-8 text-xs font-medium tracking-[0.2em] text-neutral-300 uppercase">
+                <a href="#catalog" class="hover:text-cwGold transition-colors">COLLECTIONS</a>
+                <a href="#custom-studio" class="hover:text-cwGold transition-colors flex items-center gap-1.5">
+                    <i class="fa-solid fa-wand-magic-sparkles text-cwGold"></i> BESPOKE STUDIO
+                </a>
+                <a href="#lookbook" class="hover:text-cwGold transition-colors">LOOKBOOK</a>
+                <a href="#payment-methods" class="hover:text-cwGold transition-colors">PAYMENT METHODS</a>
+            </nav>
+
+            <!-- Right Actions & Cart Trigger -->
+            <div class="flex items-center gap-4">
+                <!-- Search Trigger -->
+                <div class="relative hidden sm:block">
+                    <input type="text" id="search-input" onkeyup="filterProducts()" placeholder="Search CW catalog..." class="bg-cwCard border border-neutral-800 px-3 py-1.5 pl-8 text-xs text-white focus:border-cwGold focus:outline-none w-36 focus:w-56 transition-all duration-300">
+                    <i class="fa-solid fa-magnifying-glass text-neutral-500 text-xs absolute left-2.5 top-2.5"></i>
+                </div>
+
+                <!-- Shopping Bag -->
+                <button onclick="toggleCartDrawer()" class="relative bg-cwCard border border-cwGold/40 hover:border-cwGold text-white px-4 py-2.5 flex items-center gap-3 transition-all duration-300 shadow-md">
+                    <i class="fa-solid fa-bag-shopping text-cwGold text-base"></i>
+                    <span class="hidden sm:inline text-xs font-bold tracking-widest uppercase">BAG</span>
+                    <span id="cart-count-badge" class="bg-cwGold text-black text-[11px] font-extrabold px-2 py-0.5 font-mono">0</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-nav" class="hidden lg:hidden bg-cwCard border-b border-neutral-800 px-6 py-6 space-y-4 text-xs font-bold tracking-widest uppercase">
+            <a href="#catalog" onclick="toggleMobileNav()" class="block text-white hover:text-cwGold">Collections</a>
+            <a href="#custom-studio" onclick="toggleMobileNav()" class="block text-cwGold">Bespoke CW Studio</a>
+            <a href="#lookbook" onclick="toggleMobileNav()" class="block text-white hover:text-cwGold">Lookbook & Editorial</a>
+            <a href="#payment-methods" onclick="toggleMobileNav()" class="block text-white hover:text-cwGold">Crypto & SEPA Transfer</a>
+            <button onclick="openOrderTracker(); toggleMobileNav();" class="block text-neutral-400 hover:text-white">Track Your Order</button>
+        </div>
+    </header>
+
+    <!-- ULTRA LUXURY HERO EDITORIAL -->
+    <section class="relative min-h-[85vh] flex items-center justify-center border-b border-neutral-800/80 overflow-hidden cw-pattern">
+        <div class="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/80 to-transparent z-10"></div>
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-cwGold/10 via-transparent to-transparent z-0"></div>
+
+        <div class="relative z-20 max-w-5xl mx-auto text-center px-4 py-20">
+            <div class="inline-flex items-center gap-3 px-6 py-2 border border-cwGold/40 bg-obsidian/60 backdrop-blur-md mb-8">
+                <span class="w-2 h-2 rounded-full bg-cwGold animate-pulse"></span>
+                <span class="font-playfair text-cwGold text-xs font-semibold tracking-[0.3em] uppercase">AUTUMN / WINTER 2026 — SAMUEL COLLINS</span>
+            </div>
+            
+            <h1 class="font-playfair text-4xl sm:text-7xl lg:text-8xl font-black tracking-[0.1em] text-white mb-6 uppercase leading-tight">
+                HAUTE COUTURE <br><span class="gold-gradient-text">CW ATELIER</span>
+            </h1>
+
+            <p class="text-neutral-300 text-sm sm:text-lg max-w-3xl mx-auto mb-10 tracking-wide font-light leading-relaxed">
+                Raw Italian luxury meets contemporary silhouette architecture. Heavyweight Mulberry silk-blends, Kuroki selvedge denim, double-faced cashmere, and 24K gold-plated custom hardware signed with the official <strong class="text-white">CW</strong> seal.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-5">
+                <a href="#catalog" class="w-full sm:w-auto bg-cwGold hover:bg-cwGoldLight text-black font-extrabold px-10 py-4 text-xs tracking-[0.25em] uppercase transition-all duration-300 shadow-[0_0_25px_rgba(212,175,55,0.3)]">
+                    Explore Luxury Catalog (€)
+                </a>
+                <a href="#custom-studio" class="w-full sm:w-auto bg-cwCard border border-cwGold/50 text-white font-bold px-10 py-4 text-xs tracking-[0.25em] uppercase hover:bg-cwGold hover:text-black transition-all duration-300">
+                    Bespoke Monogram Studio
+                </a>
+            </div>
+
+            <!-- Key Atelier Features -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 pt-10 border-t border-neutral-800/80 text-left">
+                <div>
+                    <h3 class="font-playfair text-cwGold text-lg font-bold">PARMA TAILORED</h3>
+                    <p class="text-[11px] text-neutral-400 tracking-wider">Via La Spezia Atelier</p>
+                </div>
+                <div>
+                    <h3 class="font-playfair text-cwGold text-lg font-bold">SEPA IBAN WIRE</h3>
+                    <p class="text-[11px] text-neutral-400 tracking-wider">Direct Verified Bank Pay</p>
+                </div>
+                <div>
+                    <h3 class="font-playfair text-cwGold text-lg font-bold">INSTANT BITCOIN</h3>
+                    <p class="text-[11px] text-neutral-400 tracking-wider">Zero-Fee Crypto Protocol</p>
+                </div>
+                <div>
+                    <h3 class="font-playfair text-cwGold text-lg font-bold">VIP CHAT CONCIERGE</h3>
+                    <p class="text-[11px] text-neutral-400 tracking-wider">Post-Payment Support</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FASHION CATALOG SECTION -->
+    <section id="catalog" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <span class="font-playfair text-cwGold text-xs tracking-[0.3em] font-bold uppercase">Official Catalog Feed</span>
+            <h2 class="font-playfair text-3xl sm:text-5xl font-extrabold text-white mt-2 mb-4 tracking-wider uppercase">COLLINS WASHINGTON ATELIER</h2>
+            <div class="w-24 h-0.5 bg-cwGold mx-auto"></div>
+        </div>
+
+        <!-- Filter Controls -->
+        <div class="flex flex-col lg:flex-row items-center justify-between gap-6 mb-12 pb-6 border-b border-neutral-800">
+            <!-- Category Tabs -->
+            <div class="flex flex-wrap justify-center gap-2" id="category-tabs">
+                <button onclick="filterCat('all')" class="cat-tab active bg-cwGold text-black font-extrabold px-5 py-2.5 text-[11px] uppercase tracking-widest transition-all">All Pieces</button>
+                <button onclick="filterCat('hoodies')" class="cat-tab bg-cwCard border border-neutral-800 text-neutral-300 hover:border-cwGold px-5 py-2.5 text-[11px] uppercase tracking-widest transition-all">Hoodies & Outerwear</button>
+                <button onclick="filterCat('tshirts')" class="cat-tab bg-cwCard border border-neutral-800 text-neutral-300 hover:border-cwGold px-5 py-2.5 text-[11px] uppercase tracking-widest transition-all">T-Shirts & Polos</button>
+                <button onclick="filterCat('jeans')" class="cat-tab bg-cwCard border border-neutral-800 text-neutral-300 hover:border-cwGold px-5 py-2.5 text-[11px] uppercase tracking-widest transition-all">Denim & Jeans</button>
+                <button onclick="filterCat('joggers')" class="cat-tab bg-cwCard border border-neutral-800 text-neutral-300 hover:border-cwGold px-5 py-2.5 text-[11px] uppercase tracking-widest transition-all">Cashmere Joggers</button>
+                <button onclick="filterCat('accessories')" class="cat-tab bg-cwCard border border-neutral-800 text-neutral-300 hover:border-cwGold px-5 py-2.5 text-[11px] uppercase tracking-widest transition-all">Belts & Leather Goods</button>
+            </div>
+
+            <!-- Sorting -->
+            <div class="flex items-center gap-3">
+                <span class="text-xs text-neutral-400 uppercase tracking-wider">Sort:</span>
+                <select id="sort-select" onchange="sortProducts()" class="bg-cwCard border border-neutral-800 text-xs text-neutral-200 px-3 py-2 focus:border-cwGold focus:outline-none">
+                    <option value="featured">Featured CW Collection</option>
+                    <option value="low-high">Price: Low to High (€)</option>
+                    <option value="high-low">Price: High to Low (€)</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Product Grid -->
+        <div id="catalog-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+            <!-- Dynamic CW Garment Cards Injected via JavaScript -->
+        </div>
+    </section>
+
+    <!-- BESPOKE MONOGRAM CUSTOMIZATION STUDIO -->
+    <section id="custom-studio" class="bg-cwCard border-y border-neutral-800/80 py-24 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Details -->
+                <div class="lg:col-span-5">
+                    <span class="text-cwGold text-xs font-bold uppercase tracking-[0.3em] block mb-2">Exclusive Bespoke Service</span>
+                    <h2 class="font-playfair text-3xl sm:text-5xl font-black text-white leading-tight mb-6">PERSONALIZED CW MONOGRAM STUDIO</h2>
+                    <p class="text-neutral-300 text-sm leading-relaxed mb-8">
+                        Tailor your CW piece directly in our Parma atelier. Select custom 24K gold metallic embroidery initials, hardware finishes, or double-faced silk lining.
+                    </p>
+
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-start gap-4 p-4 bg-obsidian border border-neutral-800">
+                            <div class="text-cwGold text-xl"><i class="fa-solid fa-stamp"></i></div>
+                            <div>
+                                <h4 class="text-xs font-bold text-white uppercase tracking-wider">Gold Initials Monogram</h4>
+                                <p class="text-[11px] text-neutral-400">Hand-embroidered using 24K metallic gold thread in Parma.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4 p-4 bg-obsidian border border-neutral-800">
+                            <div class="text-cwGold text-xl"><i class="fa-solid fa-shield-halved"></i></div>
+                            <div>
+                                <h4 class="text-xs font-bold text-white uppercase tracking-wider">Hardware Options</h4>
+                                <p class="text-[11px] text-neutral-400">Choose between Polished Imperial Gold, Matte Black Titanium, or Platinum zipper pulls.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Custom Studio Interactive Box -->
+                <div class="lg:col-span-7 bg-obsidian p-8 border border-cwGold/30 gold-glow">
+                    <h3 class="font-playfair text-xl font-bold text-white mb-2 uppercase tracking-wider">Customizer Studio Calculator</h3>
+                    <p class="text-neutral-400 text-xs mb-6">Build your custom CW piece and preview total price in Euro (€).</p>
+
+                    <form onsubmit="handleCustomStudioSubmit(event)" class="space-y-5">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-[11px] font-bold text-neutral-400 uppercase tracking-wider mb-2">Base CW Garment</label>
+                                <select id="custom-base-garment" onchange="calcStudioPrice()" class="w-full bg-cwCard border border-neutral-800 text-xs text-white p-3 focus:border-cwGold focus:outline-none">
+                                    <option value="480">CW Monogram Silk T-Shirt (€480)</option>
+                                    <option value="920">CW Roman Arch Gold Hoodie (€920)</option>
+                                    <option value="850">CW Straight-Leg Monogram Denim (€850)</option>
+                                    <option value="650">CW Cashmere Track Pants (€650)</option>
+                                    <option value="2800">CW Shearling Leather Bomber (€2,800)</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-[11px] font-bold text-neutral-400 uppercase tracking-wider mb-2">Hardware Finish</label>
+                                <select id="custom-hardware" onchange="calcStudioPrice()" class="w-full bg-cwCard border border-neutral-800 text-xs text-white p-3 focus:border-cwGold focus:outline-none">
+                                    <option value="0">Imperial Gold (Standard)</option>
+                                    <option value="120">Matte Black Anodized Titanium (+€120)</option>
+                                    <option value="250">Solid Platinum Hardware (+€250)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-[11px] font-bold text-neutral-400 uppercase tracking-wider mb-2">Monogram Initials (2-3 Chars)</label>
+                                <input type="text" maxlength="3" id="custom-initials" placeholder="e.g. CW" class="w-full bg-cwCard border border-neutral-800 text-xs text-white p-3 uppercase tracking-widest focus:border-cwGold focus:outline-none font-bold">
+                            </div>
+                            <div>
+                                <label class="block text-[11px] font-bold text-neutral-400 uppercase tracking-wider mb-2">Embroidery Thread</label>
+                                <select class="w-full bg-cwCard border border-neutral-800 text-xs text-white p-3 focus:border-cwGold focus:outline-none">
+                                    <option>24K Metallic Gold Thread</option>
+                                    <option>Obsidian Black Thread</option>
+                                    <option>Champagne Silver Thread</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Price Calculation -->
+                        <div class="p-4 bg-cwCard border border-neutral-800 flex items-center justify-between">
+                            <span class="text-xs font-bold uppercase text-neutral-300 tracking-wider">Bespoke Total Price:</span>
+                            <span id="custom-studio-price" class="font-mono text-xl font-extrabold text-cwBluePrice">€480.00 EUR</span>
+                        </div>
+
+                        <button type="submit" class="w-full bg-cwGold hover:bg-cwGoldLight text-black font-extrabold py-4 text-xs uppercase tracking-[0.25em] transition-all duration-300">
+                            Add Custom Bespoke CW Piece To Bag
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LOOKBOOK & CRAFTSMANSHIP EDITORIAL -->
+    <section id="lookbook" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <span class="font-playfair text-cwGold text-xs tracking-[0.3em] font-bold uppercase">Atelier Editorial</span>
+            <h2 class="font-playfair text-3xl sm:text-5xl font-extrabold text-white mt-2 mb-4 tracking-wider uppercase">CRAFTSMANSHIP & RUNWAY</h2>
+            <p class="text-neutral-400 text-sm">Crafted in Parma & Milan by master artisans under the direction of Samuel Collins.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="relative group overflow-hidden border border-neutral-800 bg-cwCard">
+                <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=800&q=80" alt="Runway 1" class="w-full h-96 object-cover group-hover:scale-105 transition-transform duration-700">
+                <div class="absolute inset-0 bg-gradient-to-t from-obsidian via-transparent to-transparent flex items-end p-6">
+                    <div>
+                        <span class="text-[10px] text-cwGold uppercase tracking-widest font-bold">Look 01</span>
+                        <h4 class="font-playfair text-lg font-bold text-white uppercase">The CW Emperor Trench & Shearling</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="relative group overflow-hidden border border-neutral-800 bg-cwCard">
+                <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=800&q=80" alt="Runway 2" class="w-full h-96 object-cover group-hover:scale-105 transition-transform duration-700">
+                <div class="absolute inset-0 bg-gradient-to-t from-obsidian via-transparent to-transparent flex items-end p-6">
+                    <div>
+                        <span class="text-[10px] text-cwGold uppercase tracking-widest font-bold">Look 02</span>
+                        <h4 class="font-playfair text-lg font-bold text-white uppercase">CW Silk Monogram & Gold Crest</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="relative group overflow-hidden border border-neutral-800 bg-cwCard">
+                <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=800&q=80" alt="Runway 3" class="w-full h-96 object-cover group-hover:scale-105 transition-transform duration-700">
+                <div class="absolute inset-0 bg-gradient-to-t from-obsidian via-transparent to-transparent flex items-end p-6">
+                    <div>
+                        <span class="text-[10px] text-cwGold uppercase tracking-widest font-bold">Look 03</span>
+                        <h4 class="font-playfair text-lg font-bold text-white uppercase">Kuroki Selvedge Denim & Leather Duffel</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VIP VOUCHER NEWSLETTER SECTION -->
+    <section class="bg-gradient-to-r from-obsidian via-cwCard to-obsidian border-y border-neutral-800 py-16">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <i class="fa-solid fa-envelope-open-text text-cwGold text-3xl mb-4"></i>
+            <h3 class="font-playfair text-2xl sm:text-4xl font-bold text-white mb-2 uppercase">RECEIVE €100 ATELIER CREDIT</h3>
+            <p class="text-neutral-400 text-xs sm:text-sm mb-6 max-w-lg mx-auto">
+                Subscribe to the Collins Washington VIP register for private drop invitations, runway access, and an instant €100 voucher code.
+            </p>
+            <form onsubmit="handleVoucherSubscribe(event)" class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+                <input type="email" required placeholder="Enter your email address" class="bg-obsidian border border-neutral-800 px-4 py-3 text-xs text-white focus:border-cwGold focus:outline-none flex-1">
+                <button type="submit" class="bg-cwGold text-black font-extrabold px-6 py-3 text-xs uppercase tracking-widest">
+                    Claim €100 Voucher
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- INTEGRATED PAYMENT GATEWAYS SECTION -->
+    <section id="payment-methods" class="bg-cwCard border-t border-neutral-800 py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="font-playfair text-cwGold text-xs tracking-[0.3em] font-bold uppercase">Transaction Infrastructure</span>
+                <h2 class="font-playfair text-3xl sm:text-5xl font-extrabold text-white mt-2 mb-4 tracking-wider uppercase">VERIFIED PAYMENT METHODS</h2>
+                <p class="text-neutral-400 text-sm">Collins Washington accepts standard PayPal, direct SEPA European bank wires, and instant Bitcoin crypto transactions.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- PayPal Method Card -->
+                <div class="bg-obsidian p-8 border border-neutral-800 hover:border-blue-500/50 transition-all">
+                    <div class="w-14 h-14 bg-blue-500/10 text-blue-400 flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-brands fa-paypal"></i>
+                    </div>
+                    <h3 class="font-playfair text-xl font-bold text-white uppercase mb-2">PayPal Merchant</h3>
+                    <p class="text-neutral-400 text-xs leading-relaxed mb-4">
+                        Instant credit/debit card authorization with full PayPal buyer protection and immediate invoice delivery.
+                    </p>
+                    <span class="text-[11px] text-blue-400 font-mono font-semibold">Payee: collinssamuel1993@gmail.com</span>
+                </div>
+
+                <!-- SEPA IBAN Wire Card -->
+                <div class="bg-obsidian p-8 border border-neutral-800 hover:border-emerald-500/50 transition-all">
+                    <div class="w-14 h-14 bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-building-columns"></i>
+                    </div>
+                    <h3 class="font-playfair text-xl font-bold text-white uppercase mb-2">SEPA Bank Wire</h3>
+                    <p class="text-neutral-400 text-xs leading-relaxed mb-4">
+                        Direct European bank transfer protocol for high-value purchases and bespoke private client orders.
+                    </p>
+                    <div class="text-[10px] text-emerald-400 font-mono space-y-1 bg-cwCard p-3 border border-neutral-800">
+                        <div><strong>Bank:</strong> Banca Monte dei Paschi di Siena</div>
+                        <div><strong>Beneficiary:</strong> Collins Washington LTD</div>
+                        <div><strong>IBAN:</strong> IT99 CW20 4312 5000 0019 9300 00</div>
+                    </div>
+                </div>
+
+                <!-- Bitcoin Wallet Card -->
+                <div class="bg-obsidian p-8 border border-cwGold/40 gold-glow">
+                    <div class="w-14 h-14 bg-cwGold/10 text-cwGold flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-brands fa-bitcoin"></i>
+                    </div>
+                    <h3 class="font-playfair text-xl font-bold text-white uppercase mb-2">Bitcoin Crypto Wallet</h3>
+                    <p class="text-neutral-400 text-xs leading-relaxed mb-4">
+                        Decentralized, zero-fee crypto payments with automated Euro to BTC conversion upon checkout.
+                    </p>
+                    <div class="text-[10px] font-mono bg-cwCard p-3 border border-neutral-800 text-neutral-300 break-all mb-3">
+                        bc1qwcewcncueptqnupkmrpdm738f0g4qmlkjfjy8m
+                    </div>
+                    <button onclick="copyBTCAddress()" class="w-full bg-cwGold text-black font-extrabold py-2 text-[10px] uppercase tracking-wider">
+                        Copy Official BTC Address
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-obsidian border-t border-neutral-800 text-neutral-400 text-xs py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+            <div class="md:col-span-2 space-y-4">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 border border-cwGold flex items-center justify-center bg-cwCard">
+                        <span class="font-playfair text-cwGold font-extrabold text-lg">CW</span>
+                    </div>
+                    <span class="font-playfair text-2xl font-black text-white tracking-[0.2em]">COLLINS WASHINGTON</span>
+                </div>
+                <p class="text-neutral-400 text-xs leading-relaxed max-w-md">
+                    Handcrafted in Parma, Italy. Collins Washington represents top-tier luxury apparel incorporating Italian silk, heavyweight fleece, cashmeres, and custom 24K gold-accented hardware.
+                </p>
+                <div class="flex gap-4 text-neutral-400 text-base">
+                    <a href="#" class="hover:text-cwGold transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="hover:text-cwGold transition-colors"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="#" class="hover:text-cwGold transition-colors"><i class="fa-brands fa-telegram"></i></a>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="font-playfair text-white font-bold tracking-[0.2em] mb-4 uppercase text-xs">Atelier Location</h4>
+                <ul class="space-y-2 text-xs">
+                    <li><strong class="text-white">Founder:</strong> Samuel Collins</li>
+                    <li><strong class="text-white">Address:</strong> Via La Spezia 20</li>
+                    <li><strong class="text-white">Postal/City:</strong> 43125 Parma, Italy</li>
+                    <li><strong class="text-white">Email:</strong> collinssamuel1993@gmail.com</li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-playfair text-white font-bold tracking-[0.2em] mb-4 uppercase text-xs">Client Services</h4>
+                <ul class="space-y-2 text-xs">
+                    <li><a href="#custom-studio" class="hover:text-cwGold">Bespoke CW Embroidery</a></li>
+                    <li><a href="#payment-methods" class="hover:text-cwGold">SEPA IBAN Verification</a></li>
+                    <li><button onclick="toggleSupportChat()" class="hover:text-cwGold text-left">Post-Payment Chat Support</button></li>
+                    <li><button onclick="openComplaintModal()" class="hover:text-cwGold text-left">File an Issue / Claim</button></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 border-t border-neutral-900 flex flex-col sm:flex-row justify-between items-center gap-4 text-[11px] text-neutral-500">
+            <p>© 2026 COLLINS WASHINGTON HAUTE COUTURE. Parma, Italy.</p>
+            <div class="flex gap-6 font-mono">
+                <span class="text-cwBluePrice">EUR (€) OFFICIAL CATALOG</span>
+                <span class="text-cwGold">BTC VERIFIED</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SHOPPING BAG & CHECKOUT DRAWER -->
+    <div id="cart-drawer" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-md flex justify-end transition-opacity">
+        <div class="w-full max-w-xl bg-obsidian border-l border-neutral-800 h-full flex flex-col justify-between p-6 sm:p-8 overflow-y-auto">
+            <div>
+                <!-- Cart Header -->
+                <div class="flex items-center justify-between pb-6 border-b border-neutral-800 mb-6">
+                    <div class="flex items-center gap-3">
+                        <i class="fa-solid fa-bag-shopping text-cwGold text-2xl"></i>
+                        <div>
+                            <h3 class="font-playfair text-xl font-bold text-white uppercase tracking-wider">COLLINS WASHINGTON BAG</h3>
+                            <p class="text-[10px] text-neutral-400 uppercase tracking-widest">Handcrafted Apparel</p>
+                        </div>
+                    </div>
+                    <button onclick="toggleCartDrawer()" class="text-neutral-400 hover:text-white text-2xl">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+
+                <!-- Items Container -->
+                <div id="cart-drawer-items" class="space-y-4 mb-6">
+                    <!-- Injected dynamically -->
+                </div>
+            </div>
+
+            <!-- Cart Calculation & Checkout Panel -->
+            <div class="border-t border-neutral-800 pt-6">
+                <!-- Promo Code -->
+                <div class="flex gap-2 mb-4">
+                    <input type="text" id="promo-input" placeholder="Promo / Voucher Code (e.g. CW100VIP)" class="bg-cwCard border border-neutral-800 px-3 py-2 text-xs text-white uppercase focus:border-cwGold focus:outline-none flex-1">
+                    <button onclick="applyPromoCode()" class="bg-cwCard border border-cwGold text-cwGold px-4 py-2 text-xs uppercase font-bold hover:bg-cwGold hover:text-black">Apply</button>
+                </div>
+
+                <div class="space-y-2 mb-6 text-xs">
+                    <div class="flex justify-between text-neutral-400">
+                        <span>Subtotal:</span>
+                        <span id="cart-subtotal" class="font-mono text-white font-bold">€0.00 EUR</span>
+                    </div>
+                    <div id="discount-row" class="hidden flex justify-between text-cwGold">
+                        <span>VIP Voucher Discount:</span>
+                        <span id="discount-amount" class="font-mono font-bold">-€100.00 EUR</span>
+                    </div>
+                    <div class="flex justify-between text-neutral-400">
+                        <span>Express Italian Shipping:</span>
+                        <span class="text-emerald-400 font-bold uppercase">Complimentary</span>
+                    </div>
+                    <div class="flex justify-between text-lg font-extrabold pt-2 border-t border-neutral-800">
+                        <span class="font-playfair text-white">TOTAL PRICE:</span>
+                        <span id="cart-grand-total" class="font-mono text-cwBluePrice">€0.00 EUR</span>
+                    </div>
+                </div>
+
+                <!-- Payment Selection Tabs -->
+                <div class="mb-6">
+                    <label class="block text-[11px] font-bold uppercase text-neutral-400 tracking-wider mb-2">Select Preferred Payment Method:</label>
+                    <div class="grid grid-cols-3 gap-2">
+                        <button onclick="selectPayTab('btc')" id="tab-btc" class="pay-tab active border-2 border-cwGold bg-cwGold/10 p-3 text-center flex flex-col items-center justify-center gap-1">
+                            <i class="fa-brands fa-bitcoin text-cwGold text-lg"></i>
+                            <span class="text-[10px] font-bold text-white">Bitcoin</span>
+                        </button>
+                        <button onclick="selectPayTab('paypal')" id="tab-paypal" class="pay-tab border-2 border-neutral-800 bg-cwCard p-3 text-center flex flex-col items-center justify-center gap-1">
+                            <i class="fa-brands fa-paypal text-blue-400 text-lg"></i>
+                            <span class="text-[10px] font-bold text-white">PayPal</span>
+                        </button>
+                        <button onclick="selectPayTab('sepa')" id="tab-sepa" class="pay-tab border-2 border-neutral-800 bg-cwCard p-3 text-center flex flex-col items-center justify-center gap-1">
+                            <i class="fa-solid fa-building-columns text-emerald-400 text-lg"></i>
+                            <span class="text-[10px] font-bold text-white">SEPA Wire</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Dynamic Payment Detail Box -->
+                <div id="checkout-method-detail" class="bg-cwCard p-4 border border-neutral-800 mb-6 text-xs">
+                    <!-- Dynamic rendering in JS -->
+                </div>
+
+                <!-- Checkout Action Button -->
+                <button onclick="executeCheckout()" class="w-full bg-cwGold hover:bg-cwGoldLight text-black font-extrabold py-4 text-xs tracking-[0.25em] uppercase transition-all shadow-[0_0_20px_rgba(212,175,55,0.2)]">
+                    <i class="fa-solid fa-lock mr-2"></i> Complete Order & Pay
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- QUICK-VIEW MODAL FOR GARMENTS -->
+    <div id="quickview-modal" class="fixed inset-0 z-50 hidden bg-black/85 backdrop-blur-md flex items-center justify-center p-4">
+        <div class="bg-obsidian border border-cwGold/40 max-w-3xl w-full p-6 sm:p-8 relative gold-glow">
+            <button onclick="closeQuickView()" class="absolute top-4 right-4 text-neutral-400 hover:text-white text-xl">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div id="quickview-content" class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <!-- Content injected via JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- ORDER TRACKER MODAL -->
+    <div id="tracker-modal" class="fixed inset-0 z-50 hidden bg-black/85 backdrop-blur-md flex items-center justify-center p-4">
+        <div class="bg-obsidian border border-neutral-800 max-w-lg w-full p-6 sm:p-8 relative">
+            <button onclick="closeOrderTracker()" class="absolute top-4 right-4 text-neutral-400 hover:text-white text-xl">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <h3 class="font-playfair text-2xl font-bold text-white mb-2 uppercase">TRACK CW SHIPMENT</h3>
+            <p class="text-neutral-400 text-xs mb-6">Enter your CW Order Number or Tracking Code sent via email.</p>
+            
+            <form onsubmit="handleTrackOrder(event)" class="space-y-4">
+                <input type="text" id="tracker-input" required placeholder="e.g. CW-894210" class="w-full bg-cwCard border border-neutral-800 p-3 text-xs text-white uppercase focus:border-cwGold focus:outline-none">
+                <button type="submit" class="w-full bg-cwGold text-black font-extrabold py-3.5 text-xs uppercase tracking-widest">
+                    Track Package Status
+                </button>
+            </form>
+            <div id="tracker-result" class="mt-6 hidden bg-cwCard p-4 border border-neutral-800 text-xs text-neutral-300">
+                <!-- Result injected -->
+            </div>
+        </div>
+    </div>
+
+    <!-- COMPLAINT / ISSUE DISPUTE MODAL -->
+    <div id="complaint-modal" class="fixed inset-0 z-50 hidden bg-black/85 backdrop-blur-md flex items-center justify-center p-4">
+        <div class="bg-obsidian border border-neutral-800 max-w-lg w-full p-6 sm:p-8 relative">
+            <button onclick="closeComplaintModal()" class="absolute top-4 right-4 text-neutral-400 hover:text-white text-xl">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <h3 class="font-playfair text-2xl font-bold text-white mb-2 uppercase">FILE AN ISSUE / CLAIM</h3>
+            <p class="text-neutral-400 text-xs mb-6">Our Parma concierge management team will review your ticket within 2 hours.</p>
+
+            <form onsubmit="handleComplaintSubmit(event)" class="space-y-4 text-xs">
+                <div>
+                    <label class="block font-bold text-neutral-300 mb-1">Order ID (Optional)</label>
+                    <input type="text" placeholder="e.g. CW-98234" class="w-full bg-cwCard border border-neutral-800 p-3 text-white focus:border-cwGold focus:outline-none">
+                </div>
+                <div>
+                    <label class="block font-bold text-neutral-300 mb-1">Email Address</label>
+                    <input type="email" required placeholder="your.email@domain.com" class="w-full bg-cwCard border border-neutral-800 p-3 text-white focus:border-cwGold focus:outline-none">
+                </div>
+                <div>
+                    <label class="block font-bold text-neutral-300 mb-1">Claim Category</label>
+                    <select class="w-full bg-cwCard border border-neutral-800 p-3 text-white focus:border-cwGold focus:outline-none">
+                        <option>Post-Payment Verification Pending</option>
+                        <option>Sizing / Alteration Request</option>
+                        <option>Shipment Delay Inquiry</option>
+                        <option>Bitcoin Payment Double-Check</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block font-bold text-neutral-300 mb-1">Description of Issue</label>
+                    <textarea required rows="3" placeholder="Provide details regarding your order or transaction..." class="w-full bg-cwCard border border-neutral-800 p-3 text-white focus:border-cwGold focus:outline-none"></textarea>
+                </div>
+                <button type="submit" class="w-full bg-cwGold text-black font-extrabold py-3.5 text-xs uppercase tracking-widest">
+                    Submit Formal Ticket
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- VIP PRIVATE FITTING CONCIERGE MODAL -->
+    <div id="concierge-modal" class="fixed inset-0 z-50 hidden bg-black/85 backdrop-blur-md flex items-center justify-center p-4">
+        <div class="bg-obsidian border border-neutral-800 max-w-lg w-full p-6 sm:p-8 relative">
+            <button onclick="closeConcierge()" class="absolute top-4 right-4 text-neutral-400 hover:text-white text-xl">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <h3 class="font-playfair text-2xl font-bold text-white mb-2 uppercase tracking-wider">CW VIP CONCIERGE</h3>
+            <p class="text-neutral-400 text-xs mb-6">Book an in-person fitting at Via La Spezia 20, Parma, Italy or request a direct video consultation with Samuel Collins.</p>
+            
+            <form onsubmit="handleConciergeSubmit(event)" class="space-y-4 text-xs">
+                <div>
+                    <label class="block font-bold text-neutral-300 mb-1">Full Name</label>
+                    <input type="text" required class="w-full bg-cwCard border border-neutral-800 p-3 text-white focus:border-cwGold focus:outline-none" placeholder="Lord / Lady Name">
+                </div>
+                <div>
+                    <label class="block font-bold text-neutral-300 mb-1">Email Address</label>
+                    <input type="email" required class="w-full bg-cwCard border border-neutral-800 p-3 text-white focus:border-cwGold focus:outline-none" placeholder="client@luxury.com">
+                </div>
+                <div>
+                    <label class="block font-bold text-neutral-300 mb-1">Appointment Type</label>
+                    <select class="w-full bg-cwCard border border-neutral-800 p-3 text-white focus:border-cwGold focus:outline-none">
+                        <option>Parma Atelier Private Fitting (Via La Spezia 20)</option>
+                        <option>Direct Virtual Couture Consultation</option>
+                        <option>Wholesale Production Inquiry</option>
+                    </select>
+                </div>
+                <button type="submit" class="w-full bg-cwGold text-black font-extrabold py-3.5 uppercase tracking-widest text-xs">
+                    Request Atelier Appointment
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- FLOATING LIVE CONCIERGE & SUPPORT CHAT WIDGET -->
+    <div class="fixed bottom-6 right-6 z-40">
+        <!-- Chat Trigger Button -->
+        <button onclick="toggleSupportChat()" class="bg-cwGold hover:bg-cwGoldLight text-black font-bold p-4 rounded-full shadow-2xl flex items-center justify-center gap-2 border-2 border-black transition-all hover:scale-105">
+            <i class="fa-solid fa-headset text-xl"></i>
+            <span class="hidden sm:inline text-xs font-extrabold tracking-wider uppercase">CW VIP Support</span>
+            <span class="w-2.5 h-2.5 rounded-full bg-emerald-600 animate-ping"></span>
+        </button>
+
+        <!-- Chat Window -->
+        <div id="support-chat-window" class="hidden fixed bottom-24 right-4 sm:right-6 w-80 sm:w-96 bg-obsidian border border-cwGold/40 shadow-2xl flex flex-col h-[500px] z-50 gold-glow">
+            <!-- Header -->
+            <div class="bg-cwCard p-4 border-b border-neutral-800 flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 border border-cwGold bg-obsidian flex items-center justify-center">
+                        <span class="font-playfair text-cwGold font-bold text-xs">CW</span>
+                    </div>
+                    <div>
+                        <h4 class="font-playfair text-sm font-bold text-white uppercase">CW VIP Concierge Support</h4>
+                        <p class="text-[9px] text-emerald-400 font-mono"><i class="fa-solid fa-circle text-[7px] mr-1"></i> Live Parma Operator</p>
+                    </div>
+                </div>
+                <button onclick="toggleSupportChat()" class="text-neutral-400 hover:text-white">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <!-- Messages Stream -->
+            <div id="chat-messages" class="flex-1 p-4 overflow-y-auto space-y-3 text-xs">
+                <div class="bg-cwCard p-3 border border-neutral-800 text-neutral-300 max-w-[85%] leading-relaxed">
+                    <strong class="text-cwGold block mb-1">Concierge Agent:</strong>
+                    Welcome to Collins Washington. How may we assist your order or payment verification today?
+                </div>
+            </div>
+
+            <!-- Quick Action Shortcuts -->
+            <div class="p-2 bg-cwCard/50 border-t border-neutral-800 flex flex-wrap gap-1">
+                <button onclick="sendQuickChat('Post-Payment Verification')" class="text-[9px] bg-obsidian hover:bg-cwGold hover:text-black border border-neutral-800 px-2 py-1 text-neutral-300 uppercase">
+                    Verify Payment
+                </button>
+                <button onclick="openComplaintModal()" class="text-[9px] bg-obsidian hover:bg-cwGold hover:text-black border border-neutral-800 px-2 py-1 text-neutral-300 uppercase">
+                    File Complaint
+                </button>
+                <button onclick="sendQuickChat('Bitcoin Tx Hash')" class="text-[9px] bg-obsidian hover:bg-cwGold hover:text-black border border-neutral-800 px-2 py-1 text-neutral-300 uppercase">
+                    BTC Support
+                </button>
+            </div>
+
+            <!-- Input Bar -->
+            <form onsubmit="handleChatSubmit(event)" class="p-3 bg-cwCard border-t border-neutral-800 flex gap-2">
+                <input type="text" id="chat-input" placeholder="Type message or order reference..." class="flex-1 bg-obsidian border border-neutral-800 px-3 py-2 text-xs text-white focus:border-cwGold focus:outline-none">
+                <button type="submit" class="bg-cwGold text-black font-bold px-3 py-2 text-xs">
+                    <i class="fa-solid fa-paper-plane"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- TOAST NOTIFICATION -->
+    <div id="toast" class="fixed bottom-6 left-6 z-50 hidden bg-cwGold text-black px-6 py-4 font-bold text-xs shadow-2xl flex items-center gap-3">
+        <i class="fa-solid fa-circle-check text-base"></i>
+        <span id="toast-message">Garment added to bag</span>
+    </div>
+
+    <!-- JAVASCRIPT APP LOGIC -->
+    <script>
+        // EXPANDED LUXURY GARMENT CATALOG (BRANDED CW / COLLINS WASHINGTON)
+        const products = [
+            // Hoodies & Outerwear
+            {
+                id: 101,
+                name: "CW Imperial Roman Arch Gold Hoodie",
+                category: "hoodies",
+                price: 920,
+                image: "https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=800&q=80",
+                description: "480 GSM organic cotton heavy French Terry featuring 24K gold metallic thread Roman Arch CW logo.",
+                colors: ["#000000", "#1f1f24", "#4a3b10"],
+                sizes: ["S", "M", "L", "XL", "XXL"]
+            },
+            {
+                id: 102,
+                name: "CW Italian Lambskin Shearling Bomber Jacket",
+                category: "hoodies",
+                price: 2800,
+                image: "https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=800&q=80",
+                description: "Hand-finished Florentine leather lined with natural plush shearling and custom gold zippers.",
+                colors: ["#000000", "#3d2314"],
+                sizes: ["M", "L", "XL"]
+            },
+            {
+                id: 103,
+                name: "CW Double-Faced Cashmere Pullover Sweater",
+                category: "hoodies",
+                price: 1150,
+                image: "https://images.unsplash.com/photo-1578587018452-892bacefd3f2?auto=format&fit=crop&w=800&q=80",
+                description: "100% Loro Piana cashmere knit with subtle embossed CW leather monogram crest on chest.",
+                colors: ["#000000", "#8c8c8c", "#d4af37"],
+                sizes: ["S", "M", "L", "XL"]
+            },
+            {
+                id: 104,
+                name: "CW All-Over Jacquard Monogram Zip Hoodie",
+                category: "hoodies",
+                price: 840,
+                image: "https://images.unsplash.com/photo-1509967419530-da38b4704bc6?auto=format&fit=crop&w=800&q=80",
+                description: "Oversized fit with custom woven tonal CW geometric pattern throughout.",
+                colors: ["#000000", "#1a1a1a"],
+                sizes: ["XS", "S", "M", "L", "XL"]
+            },
+
+            // T-Shirts & Polos
+            {
+                id: 201,
+                name: "CW Monogram Mulberry Silk-Blend T-Shirt",
+                category: "tshirts",
+                price: 480,
+                image: "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80",
+                description: "Mulberry silk blended with 280 GSM combed cotton. Subtly woven CW monogram pattern.",
+                colors: ["#000000", "#ffffff", "#d4af37"],
+                sizes: ["S", "M", "L", "XL"]
+            },
+            {
+                id: 202,
+                name: "CW High-Density Crest Oversized Heavy Tee",
+                category: "tshirts",
+                price: 390,
+                image: "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?auto=format&fit=crop&w=800&q=80",
+                description: "320 GSM organic cotton with high-density CW chest embossing, tailored in Parma.",
+                colors: ["#000000", "#2c2c34"],
+                sizes: ["S", "M", "L", "XL", "XXL"]
+            },
+            {
+                id: 203,
+                name: "CW Imperial Gold Button Mercerized Polo",
+                category: "tshirts",
+                price: 520,
+                image: "https://images.unsplash.com/photo-1625910513413-4ec29123897d?auto=format&fit=crop&w=800&q=80",
+                description: "Mercerized cotton pique with 24K gold-plated CW monogram collar hardware.",
+                colors: ["#000000", "#1b2a4a"],
+                sizes: ["S", "M", "L", "XL"]
+            },
+
+            // Denim & Jeans
+            {
+                id: 301,
+                name: "CW Distressed Kuroki Selvedge Denim",
+                category: "jeans",
+                price: 780,
+                image: "https://images.unsplash.com/photo-1542272604-780c36856842?auto=format&fit=crop&w=800&q=80",
+                description: "14.5oz Japanese selvedge denim with hand-slashed distressing and gold hardware rivets.",
+                colors: ["#1c2d42", "#0d0d0d"],
+                sizes: ["30", "32", "34", "36"]
+            },
+            {
+                id: 302,
+                name: "CW Laser-Engraved Monogram Straight Jeans",
+                category: "jeans",
+                price: 850,
+                image: "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=800&q=80",
+                description: "Laser-etched full CW monogram pattern on deep indigo Italian tailored denim.",
+                colors: ["#152238"],
+                sizes: ["30", "32", "34", "36"]
+            },
+            {
+                id: 303,
+                name: "CW Dark Rinse Slim Jeans with Gold Stitching",
+                category: "jeans",
+                price: 690,
+                image: "https://images.unsplash.com/photo-1582552938357-32b906df40cb?auto=format&fit=crop&w=800&q=80",
+                description: "Sleek dark rinse denim featuring custom gold-accented CW rear pocket embroidery.",
+                colors: ["#09090b"],
+                sizes: ["28", "30", "32", "34"]
+            },
+
+            // Cashmere Joggers
+            {
+                id: 401,
+                name: "CW Cashmere-Lined Heavy Fleece Track Pants",
+                category: "joggers",
+                price: 650,
+                image: "https://images.unsplash.com/photo-1552902865-b72c031ac5ea?auto=format&fit=crop&w=800&q=80",
+                description: "Heavyweight fleece lined with pure Italian cashmere. Custom gold zip pockets.",
+                colors: ["#000000", "#2b2b2b"],
+                sizes: ["S", "M", "L", "XL"]
+            },
+            {
+                id: 402,
+                name: "CW Monogram Jacquard Tapered Joggers",
+                category: "joggers",
+                price: 590,
+                image: "https://images.unsplash.com/photo-1517445312882-bc9910d016b7?auto=format&fit=crop&w=800&q=80",
+                description: "Custom woven CW jacquard pattern with gold-tipped elasticated drawstring.",
+                colors: ["#000000", "#4a3b10"],
+                sizes: ["S", "M", "L", "XL"]
+            },
+
+            // Belts & Leather Goods
+            {
+                id: 501,
+                name: "CW 24K Gold Monogram Buckle Calfskin Belt",
+                category: "accessories",
+                price: 450,
+                image: "https://images.unsplash.com/photo-1624222247344-550fb60583dc?auto=format&fit=crop&w=800&q=80",
+                description: "Full-grain Italian calfskin with solid 24K gold-plated CW monogram buckle.",
+                colors: ["#000000", "#4a2a18"],
+                sizes: ["85cm", "95cm", "105cm"]
+            },
+            {
+                id: 502,
+                name: "CW Reversible Monogram Leather Belt",
+                category: "accessories",
+                price: 490,
+                image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=800&q=80",
+                description: "Dual-sided black calfskin and cognac monogram leather with swivel gold buckle.",
+                colors: ["#000000"],
+                sizes: ["90cm", "100cm", "110cm"]
+            },
+            {
+                id: 503,
+                name: "CW Florentine Leather Weekender Duffel",
+                category: "accessories",
+                price: 2400,
+                image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=800&q=80",
+                description: "Handcrafted weekender bag in full-grain Florentine leather with gold zippers.",
+                colors: ["#000000", "#3d2110"],
+                sizes: ["50L Capacity"]
+            },
+            {
+                id: 504,
+                name: "CW Italian Silk Geometric Monogram Scarf",
+                category: "accessories",
+                price: 320,
+                image: "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?auto=format&fit=crop&w=800&q=80",
+                description: "100% Italian silk twill scarf printed with signature CW geometric logo.",
+                colors: ["#000000", "#d4af37"],
+                sizes: ["One Size"]
+            }
+        ];
+
+        // Global State
+        let cart = [];
+        let activePayTab = 'btc';
+        let currentCategory = 'all';
+        let appliedDiscount = 0;
+        const btcAddress = "bc1qwcewcncueptqnupkmrpdm738f0g4qmlkjfjy8m";
+
+        // Initialization
+        window.onload = function() {
+            renderCatalog(products);
+            updateCartDrawerUI();
+            calcStudioPrice();
+        };
+
+        // Render Catalog Grid
+        function renderCatalog(items) {
+            const grid = document.getElementById('catalog-grid');
+            grid.innerHTML = '';
+
+            if(items.length === 0) {
+                grid.innerHTML = `<div class="col-span-full text-center py-12 text-neutral-500 font-playfair">No CW garments match your search filter.</div>`;
+                return;
+            }
+
+            items.forEach(product => {
+                const card = document.createElement('div');
+                card.className = "bg-obsidian border border-neutral-800 hover:border-cwGold/60 transition-all duration-500 group flex flex-col justify-between gold-glow";
+                
+                // Color swatches HTML
+                let colorSwatches = product.colors.map(c => `<span class="w-3.5 h-3.5 rounded-full border border-neutral-700" style="background-color: ${c}"></span>`).join(' ');
+                
+                card.innerHTML = `
+                    <div>
+                        <!-- Garment Image -->
+                        <div class="relative h-80 overflow-hidden bg-cwCard">
+                            <img src="${product.image}" alt="${product.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            <div class="absolute top-3 left-3 bg-obsidian/90 border border-cwGold/30 px-3 py-1 text-[9px] font-bold text-cwGold uppercase tracking-widest">
+                                CW ATELIER
+                            </div>
+                            <button onclick="openQuickView(${product.id})" class="absolute bottom-3 right-3 bg-obsidian/90 hover:bg-cwGold hover:text-black text-white p-2.5 transition-all">
+                                <i class="fa-solid fa-eye text-xs"></i>
+                            </button>
+                        </div>
+
+                        <!-- Garment Details -->
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-1">
+                                <span class="text-[10px] text-cwGold font-bold uppercase tracking-widest">COLLINS WASHINGTON</span>
+                                <div class="flex items-center gap-1">${colorSwatches}</div>
+                            </div>
+                            <h3 class="font-playfair text-base font-bold text-white mb-2 leading-snug group-hover:text-cwGold transition-colors">${product.name}</h3>
+                            <p class="text-neutral-400 text-xs line-clamp-2 leading-relaxed mb-4">${product.description}</p>
+                            
+                            <!-- Price in Euro -->
+                            <div class="flex items-center justify-between border-t border-neutral-800/80 pt-4">
+                                <span class="text-[10px] text-neutral-400 uppercase tracking-wider">Price:</span>
+                                <span class="font-mono text-lg font-extrabold text-cwBluePrice">€${product.price.toLocaleString()} EUR</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Add to Bag Action -->
+                    <div class="px-6 pb-6 pt-0">
+                        <button onclick="addToCart(${product.id})" class="w-full bg-cwCard border border-neutral-700 hover:border-cwGold hover:bg-cwGold hover:text-black text-white font-extrabold py-3 text-xs tracking-[0.2em] uppercase transition-all duration-300 flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-bag-shopping"></i> Add To Bag
+                        </button>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        // Category Filtering
+        function filterCat(cat) {
+            currentCategory = cat;
+            document.querySelectorAll('.cat-tab').forEach(btn => {
+                btn.classList.remove('bg-cwGold', 'text-black');
+                btn.classList.add('bg-cwCard', 'text-neutral-300');
+            });
+            event.target.classList.remove('bg-cwCard', 'text-neutral-300');
+            event.target.classList.add('bg-cwGold', 'text-black');
+
+            let filtered = cat === 'all' ? products : products.filter(p => p.category === cat);
+            renderCatalog(filtered);
+        }
+
+        // Search Filter
+        function filterProducts() {
+            const query = document.getElementById('search-input').value.toLowerCase();
+            const filtered = products.filter(p => p.name.toLowerCase().includes(query) || p.description.toLowerCase().includes(query));
+            renderCatalog(filtered);
+        }
+
+        // Price Sorter
+        function sortProducts() {
+            const val = document.getElementById('sort-select').value;
+            let items = [...products];
+            if(currentCategory !== 'all') {
+                items = items.filter(p => p.category === currentCategory);
+            }
+
+            if(val === 'low-high') {
+                items.sort((a,b) => a.price - b.price);
+            } else if(val === 'high-low') {
+                items.sort((a,b) => b.price - a.price);
+            }
+            renderCatalog(items);
+        }
+
+        // Cart Logic
+        function addToCart(productId) {
+            const product = products.find(p => p.id === productId);
+            const existing = cart.find(item => item.id === productId);
+
+            if(existing) {
+                existing.qty++;
+            } else {
+                cart.push({
+                    id: product.id,
+                    name: product.name,
+                    price: product.price,
+                    image: product.image,
+                    qty: 1
+                });
+            }
+
+            showToast(`Added ${product.name} to bag`);
+            updateCartDrawerUI();
+        }
+
+        function updateCartQty(id, delta) {
+            const item = cart.find(i => i.id === id);
+            if(item) {
+                item.qty += delta;
+                if(item.qty <= 0) {
+                    cart = cart.filter(i => i.id !== id);
+                }
+            }
+            updateCartDrawerUI();
+        }
+
+        function applyPromoCode() {
+            const code = document.getElementById('promo-input').value.trim().toUpperCase();
+            if(code === 'CW100VIP') {
+                appliedDiscount = 100;
+                document.getElementById('discount-row').classList.remove('hidden');
+                showToast("€100 VIP Voucher Applied!");
+                updateCartDrawerUI();
+            } else {
+                alert("Invalid voucher code. Try code: CW100VIP");
+            }
+        }
+
+        function updateCartDrawerUI() {
+            const badge = document.getElementById('cart-count-badge');
+            const container = document.getElementById('cart-drawer-items');
+            const subtotalElem = document.getElementById('cart-subtotal');
+            const grandTotalElem = document.getElementById('cart-grand-total');
+
+            const totalCount = cart.reduce((sum, item) => sum + item.qty, 0);
+            const subtotal = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+            const grandTotal = Math.max(0, subtotal - appliedDiscount);
+
+            badge.innerText = totalCount;
+            subtotalElem.innerText = `€${subtotal.toLocaleString('en-US', {minimumFractionDigits: 2})} EUR`;
+            grandTotalElem.innerText = `€${grandTotal.toLocaleString('en-US', {minimumFractionDigits: 2})} EUR`;
+
+            if(cart.length === 0) {
+                container.innerHTML = `
+                    <div class="text-center py-16 text-neutral-500 font-playfair">
+                        <i class="fa-solid fa-bag-shopping text-4xl mb-3 block text-neutral-700"></i>
+                        <p class="text-xs">Your Collins Washington bag is empty.</p>
+                    </div>
+                `;
+            } else {
+                container.innerHTML = '';
+                cart.forEach(item => {
+                    const div = document.createElement('div');
+                    div.className = "flex items-center gap-4 bg-cwCard p-4 border border-neutral-800";
+                    div.innerHTML = `
+                        <img src="${item.image}" class="w-16 h-16 object-cover border border-neutral-800">
+                        <div class="flex-1">
+                            <h4 class="text-xs font-bold text-white font-playfair">${item.name}</h4>
+                            <p class="text-cwBluePrice font-mono text-xs font-bold">€${(item.price * item.qty).toLocaleString()} EUR</p>
+                        </div>
+                        <div class="flex items-center gap-2 bg-obsidian px-3 py-1 border border-neutral-800">
+                            <button onclick="updateCartQty(${item.id}, -1)" class="text-neutral-400 hover:text-white text-xs font-mono">-</button>
+                            <span class="text-xs font-bold text-white font-mono px-1">${item.qty}</span>
+                            <button onclick="updateCartQty(${item.id}, 1)" class="text-neutral-400 hover:text-white text-xs font-mono">+</button>
+                        </div>
+                    `;
+                    container.appendChild(div);
+                });
+            }
+
+            renderPaymentDetailPanel();
+        }
+
+        function toggleCartDrawer() {
+            document.getElementById('cart-drawer').classList.toggle('hidden');
+        }
+
+        function toggleMobileNav() {
+            document.getElementById('mobile-nav').classList.toggle('hidden');
+        }
+
+        // Customizer Studio
+        function calcStudioPrice() {
+            const base = parseFloat(document.getElementById('custom-base-garment').value);
+            const hardware = parseFloat(document.getElementById('custom-hardware').value);
+            const total = base + hardware;
+            document.getElementById('custom-studio-price').innerText = `€${total.toLocaleString('en-US', {minimumFractionDigits: 2})} EUR`;
+        }
+
+        function handleCustomStudioSubmit(e) {
+            e.preventDefault();
+            const baseSelect = document.getElementById('custom-base-garment');
+            const selectedText = baseSelect.options[baseSelect.selectedIndex].text;
+            const initials = document.getElementById('custom-initials').value.toUpperCase() || 'CW';
+            const basePrice = parseFloat(baseSelect.value);
+            const hardwarePrice = parseFloat(document.getElementById('custom-hardware').value);
+            const finalPrice = basePrice + hardwarePrice;
+
+            cart.push({
+                id: Date.now(),
+                name: `[BESPOKE] ${selectedText} (Initials: ${initials})`,
+                price: finalPrice,
+                image: "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80",
+                qty: 1
+            });
+
+            showToast(`Bespoke CW garment added to bag!`);
+            updateCartDrawerUI();
+            toggleCartDrawer();
+        }
+
+        // Payment Tab Selection
+        function selectPayTab(tab) {
+            activePayTab = tab;
+            document.querySelectorAll('.pay-tab').forEach(b => {
+                b.classList.remove('border-cwGold', 'bg-cwGold/10');
+                b.classList.add('border-neutral-800', 'bg-cwCard');
+            });
+            const sel = document.getElementById(`tab-${tab}`);
+            sel.classList.remove('border-neutral-800', 'bg-cwCard');
+            sel.classList.add('border-cwGold', 'bg-cwGold/10');
+
+            renderPaymentDetailPanel();
+        }
+
+        function renderPaymentDetailPanel() {
+            const panel = document.getElementById('checkout-method-detail');
+            const subtotal = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+            const grandTotal = Math.max(0, subtotal - appliedDiscount);
+
+            if(activePayTab === 'btc') {
+                const btcEst = (grandTotal / 65000).toFixed(6);
+                const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=bitcoin:${btcAddress}?amount=${btcEst}`;
+
+                panel.innerHTML = `
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center font-bold text-cwGold">
+                            <span><i class="fa-brands fa-bitcoin mr-1"></i> Bitcoin Wallet (Zero Fees)</span>
+                            <span class="font-mono text-white text-sm">${btcEst} BTC</span>
+                        </div>
+                        <div class="flex gap-3 items-center bg-obsidian p-3 border border-neutral-800">
+                            <img src="${qrUrl}" alt="BTC QR" class="w-20 h-20 border border-cwGold/30">
+                            <div class="flex-1 overflow-hidden">
+                                <span class="text-[10px] text-neutral-400 uppercase font-bold block mb-1">Official CW Address:</span>
+                                <p class="font-mono text-[9px] text-neutral-200 break-all select-all">${btcAddress}</p>
+                                <button onclick="copyBTCAddress()" class="mt-2 text-cwGold hover:underline text-[10px] font-bold uppercase">
+                                    <i class="fa-solid fa-copy mr-1"></i> Copy BTC Address
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            } else if(activePayTab === 'paypal') {
+                panel.innerHTML = `
+                    <div class="space-y-2">
+                        <div class="flex justify-between font-bold text-blue-400">
+                            <span><i class="fa-brands fa-paypal mr-1"></i> PayPal Express Checkout</span>
+                            <span>Direct Email Authorization</span>
+                        </div>
+                        <p class="text-[11px] text-neutral-400">An official PayPal invoice for €${grandTotal.toLocaleString()} EUR will be generated for <strong>collinssamuel1993@gmail.com</strong>.</p>
+                    </div>
+                `;
+            } else if(activePayTab === 'sepa') {
+                const refCode = "CW-" + Math.floor(100000 + Math.random() * 900000);
+                panel.innerHTML = `
+                    <div class="space-y-2">
+                        <div class="flex justify-between font-bold text-emerald-400">
+                            <span><i class="fa-solid fa-building-columns mr-1"></i> SEPA European Bank Wire</span>
+                            <span>Reference: ${refCode}</span>
+                        </div>
+                        <div class="font-mono text-[10px] space-y-1 bg-obsidian p-3 border border-neutral-800">
+                            <div><strong>Bank:</strong> Banca Monte dei Paschi di Siena</div>
+                            <div><strong>Beneficiary:</strong> Collins Washington LTD</div>
+                            <div><strong>IBAN:</strong> IT99 CW20 4312 5000 0019 9300 00</div>
+                            <div><strong>SWIFT/BIC:</strong> PASCITM1M43</div>
+                        </div>
+                    </div>
+                `;
+            }
+        }
+
+        function executeCheckout() {
+            if(cart.length === 0) {
+                alert("Your shopping bag is empty. Please select a CW garment.");
+                return;
+            }
+
+            const subtotal = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+            const grandTotal = Math.max(0, subtotal - appliedDiscount);
+
+            if(activePayTab === 'btc') {
+                alert(`Order Reserved! Please transfer the exact BTC amount to: ${btcAddress}. Afterward, use the live chat to verify payment.`);
+            } else if(activePayTab === 'paypal') {
+                alert(`Redirecting to PayPal for payment of €${grandTotal.toLocaleString()} EUR to Samuel Collins (collinssamuel1993@gmail.com).`);
+            } else if(activePayTab === 'sepa') {
+                alert(`Proforma SEPA Transfer invoice generated for €${grandTotal.toLocaleString()} EUR! Complete wire to IBAN: IT99 CW20 4312 5000 0019 9300 00.`);
+            }
+
+            // Open chat window automatically for post payment verification
+            toggleCartDrawer();
+            toggleSupportChat();
+            sendQuickChat(`I just placed an order of €${grandTotal.toLocaleString()} EUR via ${activePayTab.toUpperCase()}. Requesting post-payment verification.`);
+            
+            cart = [];
+            appliedDiscount = 0;
+            document.getElementById('discount-row').classList.add('hidden');
+            updateCartDrawerUI();
+        }
+
+        // Live Concierge Support Chat Functions
+        function toggleSupportChat() {
+            document.getElementById('support-chat-window').classList.toggle('hidden');
+        }
+
+        function handleChatSubmit(e) {
+            e.preventDefault();
+            const input = document.getElementById('chat-input');
+            const msg = input.value.trim();
+            if(msg) {
+                sendQuickChat(msg);
+                input.value = '';
+            }
+        }
+
+        function sendQuickChat(text) {
+            const container = document.getElementById('chat-messages');
+            
+            // Client message
+            const clientDiv = document.createElement('div');
+            clientDiv.className = "bg-cwGold/10 p-3 border border-cwGold/40 text-white max-w-[85%] ml-auto text-right leading-relaxed";
+            clientDiv.innerHTML = `<strong class="text-cwGold block mb-1">You:</strong> ${text}`;
+            container.appendChild(clientDiv);
+
+            // Scroll to bottom
+            container.scrollTop = container.scrollHeight;
+
+            // Simulated Automated Concierge Response
+            setTimeout(() => {
+                const replyDiv = document.createElement('div');
+                replyDiv.className = "bg-cwCard p-3 border border-neutral-800 text-neutral-300 max-w-[85%] leading-relaxed";
+                
+                let responseText = "Thank you for contacting Collins Washington Atelier. Our Parma concierge agent has logged your request and will confirm your transaction status shortly.";
+                if(text.toLowerCase().includes("payment") || text.toLowerCase().includes("verify")) {
+                    responseText = "Post-payment verification received! If you paid via Bitcoin to address bc1qwcewcncueptqnupkmrpdm738f0g4qmlkjfjy8m, please allow 1-2 block confirmations.";
+                } else if(text.toLowerCase().includes("btc") || text.toLowerCase().includes("bitcoin")) {
+                    responseText = "Our official BTC wallet is bc1qwcewcncueptqnupkmrpdm738f0g4qmlkjfjy8m. Send your transaction hash here for instant order clearance.";
+                }
+
+                replyDiv.innerHTML = `<strong class="text-cwGold block mb-1">CW Concierge Agent:</strong> ${responseText}`;
+                container.appendChild(replyDiv);
+                container.scrollTop = container.scrollHeight;
+            }, 1000);
+        }
+
+        // Quick View Modal
+        function openQuickView(id) {
+            const p = products.find(prod => prod.id === id);
+            const content = document.getElementById('quickview-content');
+
+            let sizesHtml = p.sizes.map(s => `<span class="px-2.5 py-1 bg-cwCard border border-neutral-800 text-xs font-mono">${s}</span>`).join(' ');
+
+            content.innerHTML = `
+                <div class="h-80 overflow-hidden bg-cwCard border border-neutral-800">
+                    <img src="${p.image}" alt="${p.name}" class="w-full h-full object-cover">
+                </div>
+                <div>
+                    <span class="text-[10px] text-cwGold font-bold tracking-widest uppercase">COLLINS WASHINGTON HAUTE COUTURE</span>
+                    <h3 class="font-playfair text-xl font-bold text-white my-2">${p.name}</h3>
+                    <p class="text-neutral-400 text-xs leading-relaxed mb-4">${p.description}</p>
+                    
+                    <div class="mb-4">
+                        <span class="text-[10px] uppercase text-neutral-400 block mb-2 font-bold">Available Sizes:</span>
+                        <div class="flex gap-2 flex-wrap">${sizesHtml}</div>
+                    </div>
+
+                    <div class="mb-4 font-mono text-2xl font-extrabold text-cwBluePrice">€${p.price.toLocaleString()} EUR</div>
+                    <button onclick="addToCart(${p.id}); closeQuickView();" class="w-full bg-cwGold text-black font-extrabold py-3.5 text-xs uppercase tracking-widest">
+                        Add Garment To Bag
+                    </button>
+                </div>
+            `;
+            document.getElementById('quickview-modal').classList.remove('hidden');
+        }
+
+        function closeQuickView() {
+            document.getElementById('quickview-modal').classList.add('hidden');
+        }
+
+        // Order Tracker Modal
+        function openOrderTracker() {
+            document.getElementById('tracker-modal').classList.remove('hidden');
+        }
+        function closeOrderTracker() {
+            document.getElementById('tracker-modal').classList.add('hidden');
+        }
+        function handleTrackOrder(e) {
+            e.preventDefault();
+            const val = document.getElementById('tracker-input').value.trim();
+            const res = document.getElementById('tracker-result');
+            res.classList.remove('hidden');
+            res.innerHTML = `
+                <div class="flex items-center justify-between text-cwGold font-bold mb-2">
+                    <span>Order #${val} Status</span>
+                    <span class="text-emerald-400">In Atelier Prep</span>
+                </div>
+                <p class="text-neutral-400 text-[11px]">Your CW custom garments are currently undergoing final quality inspection at Via La Spezia 20, Parma, Italy. Express courier dispatch expected within 24 hours.</p>
+            `;
+        }
+
+        // Complaint Modal
+        function openComplaintModal() {
+            document.getElementById('complaint-modal').classList.remove('hidden');
+        }
+        function closeComplaintModal() {
+            document.getElementById('complaint-modal').classList.add('hidden');
+        }
+        function handleComplaintSubmit(e) {
+            e.preventDefault();
+            alert("Your claim ticket has been filed with CW Client Relations in Parma. A representative will contact your email shortly.");
+            closeComplaintModal();
+        }
+
+        // Concierge Modals
+        function openConcierge() {
+            document.getElementById('concierge-modal').classList.remove('hidden');
+        }
+        function closeConcierge() {
+            document.getElementById('concierge-modal').classList.add('hidden');
+        }
+        function handleConciergeSubmit(e) {
+            e.preventDefault();
+            alert("Your private fitting appointment request has been transmitted directly to Samuel Collins at Via La Spezia 20, Parma.");
+            closeConcierge();
+        }
+
+        // Voucher Form
+        function handleVoucherSubscribe(e) {
+            e.preventDefault();
+            alert("Subscribed! Use voucher code: CW100VIP during checkout to receive €100 credit on your order.");
+        }
+
+        // Copy Helper
+        function copyBTCAddress() {
+            document.execCommand('copy');
+            showToast("Official BTC Address Copied!");
+        }
+
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toast-message').innerText = msg;
+            toast.classList.remove('hidden');
+            setTimeout(() => {
+                toast.classList.add('hidden');
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
